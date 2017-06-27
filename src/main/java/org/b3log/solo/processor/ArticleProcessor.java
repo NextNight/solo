@@ -324,6 +324,7 @@ public class ArticleProcessor {
         dataModel.put("articlePermalink", article.optString(Article.ARTICLE_PERMALINK));
         dataModel.put("articleTitle", article.optString(Article.ARTICLE_TITLE));
         dataModel.put("articleAbstract", article.optString(Article.ARTICLE_ABSTRACT));
+        dataModel.put("articleAbstractIcon", article.optString(Article.ARTICLE_ABSTRACT_ICON));
         final String msg = request.getParameter(Keys.MSG);
 
         if (!Strings.isEmptyOrNull(msg)) {
@@ -550,7 +551,7 @@ public class ArticleProcessor {
             requestJSONObject.put(Article.ARTICLE_IS_PUBLISHED, true);
 
             final JSONObject result = articleQueryService.getArticles(requestJSONObject);
-            final List<JSONObject> articles = org.b3log.latke.util.CollectionUtils.jsonArrayToList(result.getJSONArray(Article.ARTICLES));
+            final List<JSONObject> articles = CollectionUtils.jsonArrayToList(result.getJSONArray(Article.ARTICLES));
 
             final boolean hasMultipleUsers = userQueryService.hasMultipleUsers();
 

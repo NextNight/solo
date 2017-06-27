@@ -9,6 +9,18 @@
         <#if metaDescription??>
         <meta name="description" content="${metaDescription}"/>
         </#if>
+        <#if 0 != paginationPageCount>
+            <#if paginationCurrentPageNum == 1><#-- 首页 -->
+                <#if 1 < paginationPageCount>
+                    <link rel="next" type="text/html" href="${servePath}/2">
+                </#if>
+            <#elseif paginationCurrentPageNum == paginationPageCount><#-- 尾页 -->
+                <link rel="prev" type="text/html" href="${servePath}/${paginationPageCount - 1}">
+            <#else><#-- 中间页 -->
+                <link rel="prev" type="text/html" href="${servePath}/${paginationCurrentPageNum - 1}">
+                <link rel="next" type="text/html" href="${servePath}/${paginationCurrentPageNum + 1}">
+            </#if>
+        </#if>
         </@head>
     </head>
     <body>

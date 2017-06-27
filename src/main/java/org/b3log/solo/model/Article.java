@@ -49,6 +49,11 @@ public final class Article {
     public static final String ARTICLE_ABSTRACT = "articleAbstract";
 
     /**
+     * Key of abstract.
+     */
+    public static final String ARTICLE_ABSTRACT_ICON = "articleAbstractIcon";
+
+    /**
      * Key of content.
      */
     public static final String ARTICLE_CONTENT = "articleContent";

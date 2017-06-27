@@ -19,7 +19,6 @@
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @version 0.1.0.0, Feb 17, 2017
  */
-
 /**
  * @description 皮肤脚本
  * @static
@@ -136,3 +135,12 @@ var Skin = {
     }
 };
 Skin.init();
+//捐赠
+function recalpe(){
+    if(document.getElementById('juanzeng').style.display=='none'){
+        document.getElementById('juanzeng').style.display = 'block';
+    }else{
+        document.getElementById('juanzeng').style.display='none';
+    }
+}
+

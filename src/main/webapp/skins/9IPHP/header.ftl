@@ -9,18 +9,21 @@
             <small> &nbsp; ${blogSubtitle}</small>
             <div class="fn-right">
                 <#if isLoggedIn>
-                    <a href="${servePath}/admin-index.do#main" title="${adminLabel}">
-                        <i class="icon-setting"></i> ${adminLabel}
+                    <a href="${servePath}/admin-index.do#main" title="CurrentAdmin">
+                        <i class=" icon-user" >${userName}</i>
                     </a>
-                    <a href="${logoutURL}">
-                        <i class="icon-logout"></i> ${logoutLabel}
+                    <a href="${servePath}/admin-index.do#main" title="${adminLabel}">
+                        <i class=" icon-cogs"></i> ${adminLabel}
+                    </a>
+                    <a href="${logoutURL}" title="${logoutLabel}">
+                        <i class="icon-off"></i> ${logoutLabel}
                     </a>
                     <#else>
                     <a href="${loginURL}">
-                        <i class="icon-login"></i> ${loginLabel}
+                        <i class=" icon-user"></i> ${loginLabel}
                     </a>
                     <a href="${servePath}/register">
-                        <i class="icon-register"></i> ${registerLabel}
+                        <i class="icon-user-md"></i> ${registerLabel}
                     </a>
                 </#if>
             </div>
@@ -48,21 +51,15 @@
                 <a href="${servePath}/archives.html">
                     <i class="icon-inbox"></i> ${archiveLabel}
                 </a>
-                <a rel="archive" href="${servePath}/links.html">
-                    <i class="icon-link"></i> ${linkLabel}
-                </a>
                 <a rel="alternate" href="${servePath}/blog-articles-rss.do" rel="section">
                     <i class="icon-rss"></i> RSS
                 </a>
             </nav>
-            <div class="fn-right">
-                <form class="form" target="_blank" action="http://zhannei.baidu.com/cse/site">
-                    <input placeholder="${searchLabel}" id="search" type="text" name="q"/>
-                    <button type="submit"><i class="icon-search"></i></button>
-                    <input type="hidden" name="cc" value="${serverHost}">
-                </form>
-            </div>
+            <#--RZX
+                移除搜索框，到side-head
+             change -->
         </div>
+        <div class="icon-down fn-right" title="去底部" onclick="Util.goBottom()"></div>
     </div>
 </header>
 <div class="responsive fn-none">
@@ -87,7 +84,7 @@
                 </li>
                 <li>
                     <a href="${servePath}/register">
-                        <i class="icon-register"></i> ${registerLabel}
+                        <i class="icon-user-md"></i> ${registerLabel}
                     </a>
                 </li>
         </#if>

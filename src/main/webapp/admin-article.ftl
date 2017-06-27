@@ -20,6 +20,12 @@
         <label>${tags1WithTips1Label}</label>
         <input id="tag" type="text"/>
     </div>
+    <#-- RZX ADD abstract-icon -->
+    <div>
+        <label>摘要图片：</label>
+        <input id="articleAbstractIcon" type="text" name="articleAbstractIcon"/>
+    </div>
+    <#-- end RZX ADD abstract-icon -->
     <div class="comment-content">
         <label>${abstract1Label}</label>
         <div>

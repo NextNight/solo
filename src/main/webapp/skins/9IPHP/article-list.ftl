@@ -18,11 +18,26 @@
                 </#if>
             </h1>
 
+        </header>
+        <main class="content-reset fn-clear" >
+            <#-- RZX ADD -->
+           <#if (article.articleAbstractIcon)??>
+                <img class="img-at-icon"  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" >
+           <#else>
+               <img class="img-at-icon"  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="默认图片" title="${article.articleTitle}" ">
+           </#if>
+            ${article.articleAbstract}
+        </main>
+        <footer class="fn-clear tags">
+            <#list article.articleTags?split(",") as articleTag>
+                <a class="tag " rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                ${articleTag}</a>
+            </#list>
             <div class="meta">
                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
-                    <i class="icon-date"></i>
+                    <i class="icon-calendar"></i>
                     <time>
-                        ${article.articleCreateDate?string("yyyy-MM-dd")}
+                    ${article.articleCreateDate?string("yyyy-MM-dd")}
                     </time>
                 </span>
                 &nbsp; | &nbsp;
@@ -33,30 +48,19 @@
                 </span>
                 &nbsp; | &nbsp;
                 <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
-                    <i class="icon-views"></i>
-                    ${article.articleViewCount} ${viewLabel}
+                    <i class="icon-eye-open"></i>
+                ${article.articleViewCount} ${viewLabel}
                 </span>
-            </div>
-        </header>
-        <div class="content-reset">
-            ${article.articleAbstract}
-        </div>
-        <footer class="fn-clear tags">
-            <#list article.articleTags?split(",") as articleTag>
-                <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                    ${articleTag}</a>
-            </#list>
-            <a href="${servePath}${article.articlePermalink}#more" rel="contents" class="fn-right">
+                <a href="${servePath}${article.articlePermalink}#more" rel="contents" class="fn-right tooltipped tooltipped-n">
                 ${readLabel} &raquo;
-            </a>
+                </a>
+            </div>
         </footer>
     </article>
     </#list>
-
-
     <#if 0 != paginationPageCount>
         <div class="fn-clear">
-            <nav class="pagination fn-right">
+            <nav class="pagination" style="align-content: center">
                 <#if 1 != paginationPageNums?first>
                 <a href="${servePath}${path}/${paginationPreviousPageNum}" class="page-number">&laquo;</a>
                     <a class="page-number" href="${servePath}${path}/1">1</a> <span class="page-number">...</span>
@@ -75,4 +79,5 @@
             </nav>
         </div>
     </#if>
-</div>
+        <div class="#relevantArticles" style="width: ">
+        </div>

@@ -13,7 +13,7 @@
             <div class="main-wrap">
                 <main>
                     <div class="title">
-                        <h2 class="tip"><i class="icon-category"></i>
+                        <h2 class="tip"><i class=" icon-list-ul"></i>
                             &nbsp;${category.categoryTitle}
                             <small>${category.categoryDescription}</small>
                         </h2>

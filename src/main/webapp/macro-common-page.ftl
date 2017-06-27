@@ -9,15 +9,15 @@
     <title><#if blogTitle??>${blogTitle} - </#if>${title}</title>
     <link type="text/css" rel="stylesheet"
           href="${staticServePath}/css/default-init${miniPostfix}.css?${staticResourceVersion}" charset="utf-8"/>
-    <link rel="icon" type="image/png" href="${staticServePath}/favicon.png"/>
-    <link rel="apple-touch-icon" href="${staticServePath}/favicon.png">
+    <link rel="icon" type="image/png" href="${staticServePath}/favicon1.png"/>
+    <link rel="apple-touch-icon" href="${staticServePath}/favicon1.png">
 </head>
 <body>
 <div class="wrap">
     <div class="content">
         <div class="logo">
             <a href="http://b3log.org" target="_blank">
-                <img border="0" alt="Solo" title="Solo" src="${staticServePath}/images/logo.jpg"/>
+                <img border="0" alt="Solo" title="Solo" src="${staticServePath}/images/logo2.jpg"/>
             </a>
         </div>
         <div class="main">

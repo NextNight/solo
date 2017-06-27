@@ -8,15 +8,15 @@
         <link type="text/css" rel="stylesheet" href="${staticServePath}/css/default-admin${miniPostfix}.css?${staticResourceVersion}" />
         <link type="text/css" rel="stylesheet" href="${staticServePath}/js/lib/CodeMirrorEditor/codemirror.min.css?${staticResourceVersion}" />
         <link type="text/css" rel="stylesheet" href="${staticServePath}/js/lib/highlight.js-9.6.0/styles/github.css?${staticResourceVersion}" />
-        <link rel="icon" type="image/png" href="${staticServePath}/favicon.png" />
+        <link rel="icon" type="image/png" href="${staticServePath}/favicon1.png" />
     </head>
     <body onhashchange="admin.setCurByHash();">
         <div class="tip"><span id="loadMsg">${loadingLabel}</span></div>
         <div class="tip tip-msg"><span id="tipMsg"></span></div>
         <div id="allPanel">
             <div id="top">
-                <a href="http://b3log.org" target="_blank" class="hover">
-                    Solo
+                <a href="http://b3log.org" target="_blank" class="hover" style="font-size: 40px;font-family:华文行楷 " >
+                    Atlas
                 </a>
                
                 <span class="right"> 

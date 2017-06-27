@@ -426,6 +426,13 @@
                     "length": 2000
                 },
                 {
+                    "name": "articleAbstractIcon",
+                    "description": "List icon",
+                    "type": "String",
+                    "length": 100,
+                    "nullable": true
+                },
+                {
                     "name": "articleTags",
                     "type": "String",
                     "length": 2000

@@ -116,6 +116,10 @@ public class UserMgmtService {
 
                 if (userPassword.equals(hashPassword)) {
                     Sessions.login(request, response, user);
+                    /*RZX ADD*/
+                    final String userName = user.optString(User.USER_NAME);
+                    request.setAttribute("userName",userName);
+                    /*--end*/
                     LOGGER.log(Level.DEBUG, "Logged in with cookie[email={0}]", userEmail);
                 }
             }
