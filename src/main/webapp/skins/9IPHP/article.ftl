@@ -100,9 +100,10 @@
                             </div>
                         </footer>
                     <@comments commentList=articleComments article=article></@comments>
-                        <div id="externalRelevantArticles" class="list"></div>
-                        <div id="relevantArticles" class="list"></div>
-                        <div id="randomArticles" class="list"></div>
+                        <div id="relevantArticles" class="list module fn-left" style="width: 50%"></div>
+                        <div id="randomArticles" class="list module " style="width: 50%"></div>
+                        <div id="externalRelevantArticles" class="list module"></div>
+
                     </article>
                 </main>
             <#include "side.ftl">
@@ -119,7 +120,7 @@
             , "<header class='title'><h2>${externalRelevantArticlesLabel}</h2></header>");
             </#if>
             <#if 0 != relevantArticlesDisplayCount>
-            page.loadRelevantArticles('${article.oId}', '<h4>${relevantArticlesLabel}</h4>');
+            page.loadRelevantArticles('${article.oId}', '<h2>${relevantArticlesLabel}</h2>');
             </#if>
         </@comment_script>
     </body>

@@ -27,8 +27,8 @@
             </td>
         </tr>
         <tr>
-            <td><img src="${staticServePath}/images/wechat_qrcode.jpg" style="width:auto;max-width:100%;height:140px;"/></td>
-            <td><img src="${staticServePath}/images/alipay_qrcode.jpg" style="width:auto;max-width:100%;height:140px;"/></td>
+            <td><img src="${staticServePath}/images/wechat.png" style="width:auto;max-width:100%;height:140px;"/></td>
+            <td><img src="${staticServePath}/images/alipay.png" style="width:auto;max-width:100%;height:140px;"/></td>
         </tr>
         <tr class="cen">
             <td class="text-primary">微信打赏</td>
