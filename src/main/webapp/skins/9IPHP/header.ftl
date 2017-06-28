@@ -59,7 +59,7 @@
                 移除搜索框，到side-head
              change -->
         </div>
-        <div class="icon-down fn-right" title="去底部" onclick="Util.goBottom()"></div>
+       <#-- <div class="icon-up " title="去底部" onclick="Util.goBottom()"></div>-->
     </div>
 </header>
 <div class="responsive fn-none">

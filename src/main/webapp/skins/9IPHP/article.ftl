@@ -82,7 +82,7 @@
                                 </a>
                             </div -->
 
-                            <div class="rel fn-clear">
+                            <div class="rel fn-clear" style="border-bottom: 1px solid wheat">
                                 <#if previousArticlePermalink??>
                                     <a href="${servePath}${previousArticlePermalink}" rel="prev"
                                        class="fn-left tooltipped tooltipped-n"
@@ -99,14 +99,16 @@
                                 </#if>
                             </div>
                         </footer>
+                        <div class="list module">
+                            <div id="randomArticles"  ></div>
+                            <div id="relevantArticles"  ></div>
+                            <div id="externalRelevantArticles"></div>
+                        </div>
                     <@comments commentList=articleComments article=article></@comments>
-                        <div id="relevantArticles" class="list module fn-left" style="width: 50%"></div>
-                        <div id="randomArticles" class="list module " style="width: 50%"></div>
-                        <div id="externalRelevantArticles" class="list module"></div>
-
                     </article>
                 </main>
             <#include "side.ftl">
+            <#include "ad-foot.ftl">
             </div>
         </div>
         <#include "footer.ftl">
@@ -120,7 +122,7 @@
             , "<header class='title'><h2>${externalRelevantArticlesLabel}</h2></header>");
             </#if>
             <#if 0 != relevantArticlesDisplayCount>
-            page.loadRelevantArticles('${article.oId}', '<h2>${relevantArticlesLabel}</h2>');
+            page.loadRelevantArticles('${article.oId}', '<header class="title"><h2>${relevantArticlesLabel}</h2></header>');
             </#if>
         </@comment_script>
     </body>

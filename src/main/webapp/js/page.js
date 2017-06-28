@@ -450,7 +450,7 @@ $.extend(Page.prototype, {
                     listHtml += randomArticleLiHtml;
                 }
 
-                var titleHTML = headTitle ? headTitle : "<h2>" + randomArticles1Label + "</h2>";
+                var titleHTML = headTitle ? headTitle : "<header class='title'><h2>" + randomArticles1Label + "</h2></header>";
                 var randomArticleListHtml = titleHTML + "<ul class='marginLeft12'>" + listHtml + "</ul>";
                 $("#randomArticles").append(randomArticleListHtml);
             }
@@ -480,7 +480,8 @@ $.extend(Page.prototype, {
                             + title + "</a></li>"
                     listHtml += articleLiHtml
                 }
-                var titleHTML = headTitle ? headTitle : "<h2>" + relevantArticlesLabel + "</h2>";
+                var titleHTML = headTitle ? headTitle : "<header class='title'><h2>" + relevantArticlesLabel + "</h2></header>";
+               // var titleHTML = headTitle ? headTitle : "<h2>" + relevantArticlesLabel + "</h2>";
                 var relevantArticleListHtml = titleHTML
                         + "<ul class='marginLeft12'>"
                         + listHtml + "</ul>";

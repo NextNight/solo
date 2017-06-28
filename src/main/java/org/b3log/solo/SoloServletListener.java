@@ -106,48 +106,48 @@ public final class SoloServletListener extends AbstractServletListener {
     /**
      * Bean manager.
      */
-    private LatkeBeanManager beanManager;
-    /**
-     * Request lock.
-     */
-    private Lock requestLock = new ReentrantLock();
+private LatkeBeanManager beanManager;
+/**
+* Request lock.
+*/
+private Lock requestLock = new ReentrantLock();
 
-    @Override
-    public void contextInitialized(final ServletContextEvent servletContextEvent) {
-        Latkes.setScanPath("org.b3log.solo"); // For Latke IoC        
-        super.contextInitialized(servletContextEvent);
-        Stopwatchs.start("Context Initialized");
+@Override
+public void contextInitialized(final ServletContextEvent servletContextEvent) {
+Latkes.setScanPath("org.b3log.solo"); // For Latke IoC
+super.contextInitialized(servletContextEvent);
+Stopwatchs.start("Context Initialized");
 
-        beanManager = Lifecycle.getBeanManager();
+beanManager = Lifecycle.getBeanManager();
 
-        // Upgrade check (https://github.com/b3log/solo/issues/12040)
-        final UpgradeService upgradeService = beanManager.getReference(UpgradeService.class);
-        upgradeService.upgrade();
+// Upgrade check (https://github.com/b3log/solo/issues/12040)
+final UpgradeService upgradeService = beanManager.getReference(UpgradeService.class);
+upgradeService.upgrade();
 
-        // Import check (https://github.com/b3log/solo/issues/12293)
-        final ImportService importService = beanManager.getReference(ImportService.class);
-        importService.importMarkdowns();
+// Import check (https://github.com/b3log/solo/issues/12293)
+final ImportService importService = beanManager.getReference(ImportService.class);
+importService.importMarkdowns();
 
-        JdbcRepository.dispose();
+JdbcRepository.dispose();
 
-        // Set default skin, loads from preference later
-        Skins.setDirectoryForTemplateLoading(Option.DefaultPreference.DEFAULT_SKIN_DIR_NAME);
+// Set default skin, loads from preference later
+Skins.setDirectoryForTemplateLoading(Option.DefaultPreference.DEFAULT_SKIN_DIR_NAME);
 
-        final OptionRepository optionRepository = beanManager.getReference(OptionRepositoryImpl.class);
+final OptionRepository optionRepository = beanManager.getReference(OptionRepositoryImpl.class);
 
-        final Transaction transaction = optionRepository.beginTransaction();
+final Transaction transaction = optionRepository.beginTransaction();
 
-        try {
-            loadPreference();
+try {
+    loadPreference();
 
-            if (transaction.isActive()) {
-                transaction.commit();
-            }
-        } catch (final Exception e) {
-            if (transaction.isActive()) {
-                transaction.rollback();
-            }
-        }
+    if (transaction.isActive()) {
+        transaction.commit();
+    }
+} catch (final Exception e) {
+    if (transaction.isActive()) {
+        transaction.rollback();
+    }
+}
 
         registerEventProcessor();
 

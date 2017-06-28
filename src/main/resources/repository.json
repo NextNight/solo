@@ -429,8 +429,7 @@
                     "name": "articleAbstractIcon",
                     "description": "List icon",
                     "type": "String",
-                    "length": 100,
-                    "nullable": true
+                    "length": 100
                 },
                 {
                     "name": "articleTags",

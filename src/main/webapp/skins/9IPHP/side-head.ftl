@@ -15,8 +15,8 @@
     <a href="#" style="width: 25%;float: left">
         <i class=" icon-facebook-sign "></i>Facebook
     </a>
-    <a href="javascript:recalpe();" title="O(∩_∩)O土豪请打赏！！" style="width: 25%;float: right;background-color:deepskyblue;color: white">
-                <i class="icon-qrcode" ></i>打赏(∩_∩)
+    <a href="javascript:recalpe();" title="O(∩_∩)O土豪请打赏！！" style="background-color:deepskyblue;color: white;float: right">
+                <i class="icon-qrcode" ></i>打赏^_^
     </a>
 </div>
 <div  id="juanzeng" name="juanzeng" style="border: 1px solid whitesmoke;display: none">

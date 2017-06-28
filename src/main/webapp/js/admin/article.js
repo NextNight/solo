@@ -91,7 +91,7 @@ admin.article = {
         admin.selectTab("article/article");
     },
     /**
-     * @description 获取文章内容
+     * @description 获取文章内容《更新文章先获取文章内容，然后设置到编辑器中》
      */
     getAndSet: function () {
         $("#loadMsg").text(Label.loadingLabel);
@@ -133,7 +133,9 @@ admin.article = {
                         tagsString += "," + tags[i].tagTitle;
                     }
                 }
-
+                /*RZX ADD*/
+                $("#articleAbstractIcon").val(result.article.articleAbstractIcon)
+                //alert(result.article.articleAbstractIcon)
                 $("#tag").val(tagsString);
                 $("#permalink").val(result.article.articlePermalink);
                 $("#viewPwd").val(result.article.articleViewPwd);
@@ -204,12 +206,18 @@ admin.article = {
 
             var articleContent = admin.editors.articleEditor.getContent(),
                     articleAbstract = admin.editors.abstractEditor.getContent();
+            /*设置默认icon值*/
+            var articleAbstractIcon = $("#articleAbstractIcon").val();
+            if(articleAbstractIcon == "" || articleAbstractIcon == undefined || articleAbstractIcon == null){
+                articleAbstractIcon="http://os36ky6gs.bkt.clouddn.com/65dc39577aa7411d95848cd772fe34d4.png";
+            }
 
             var requestJSONObject = {
                 "article": {
                     "articleTitle": $("#title").val(),
                     "articleContent": articleContent,
                     "articleAbstract": articleAbstract,
+                    "articleAbstractIcon":  articleAbstractIcon,
                     "articleTags": this.trimUniqueArray($("#tag").val()).toString(),
                     "articlePermalink": $("#permalink").val(),
                     "articleIsPublished": articleIsPublished,
@@ -285,6 +293,7 @@ admin.article = {
                     "articleTitle": $("#title").val(),
                     "articleContent": articleContent,
                     "articleAbstract": articleAbstract,
+                    "articleAbstractIcon":  $("#articleAbstractIcon").val(),
                     "articleTags": this.trimUniqueArray($("#tag").val()).toString(),
                     "articlePermalink": $("#permalink").val(),
                     "articleIsPublished": articleIsPublished,

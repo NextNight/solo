@@ -21,10 +21,10 @@
         </header>
         <main class="content-reset fn-clear" >
             <#-- RZX ADD -->
-           <#if (article.articleAbstractIcon)??>
-                <img class="img-at-icon"  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" >
+           <#if article.articleAbstractIcon?exists>
+                <img class="img-at-icon"  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
            <#else>
-               <img class="img-at-icon"  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="默认图片" title="${article.articleTitle}" ">
+                <img class="img-at-icon"  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="${article.articleTitle}" title="${article.articleTitle}" />
            </#if>
             ${article.articleAbstract}
         </main>
@@ -37,7 +37,7 @@
                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
                     <i class="icon-calendar"></i>
                     <time>
-                    ${article.articleCreateDate?string("yyyy-MM-dd")}
+                         ${article.articleCreateDate?string("yyyy-MM-dd")}
                     </time>
                 </span>
                 &nbsp; | &nbsp;
@@ -79,5 +79,4 @@
             </nav>
         </div>
     </#if>
-        <div class="#relevantArticles" style="width: ">
-        </div>
+
