@@ -36,13 +36,13 @@
         </#if>
 
         <#if 0 != mostUsedTags?size>
-            <div class="module">
+            <div id="tagscloud" class="module">
                 <header><h2>${tagsLabel}</h2></header>
                 <main>
                     <#list mostUsedTags as tag>
                         <a rel="tag" data-count="${tag.tagPublishedRefCount}"
                            href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
-                           class="tag tooltipped tooltipped-n"
+                           class="tagc${tag_index%5}"
                            aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
                                 ${tag.tagTitle}(${tag.tagPublishedRefCount})</a>
                     </#list>
