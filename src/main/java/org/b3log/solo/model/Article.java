@@ -49,7 +49,7 @@ public final class Article {
     public static final String ARTICLE_ABSTRACT = "articleAbstract";
 
     /**
-     * Key of abstract.
+     * Key of abstractIcon.
      */
     public static final String ARTICLE_ABSTRACT_ICON = "articleAbstractIcon";
 
@@ -122,6 +122,11 @@ public final class Article {
      * Key of author email.
      */
     public static final String ARTICLE_AUTHOR_EMAIL = "articleAuthorEmail";
+
+    /**
+     * Key of author email.
+     */
+    public static final String ARTICLE_AUTHOR_Name = "articleAuthorName";
 
     /**
      * Key of had been published.

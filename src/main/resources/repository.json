@@ -442,6 +442,11 @@
                     "length": 255
                 },
                 {
+                    "name": "articleAuthorName",
+                    "type": "String",
+                    "length": 255
+                },
+                {
                     "name": "articleCommentCount",
                     "type": "int"
                 },

@@ -18,8 +18,7 @@
                 <a href="http://b3log.org" target="_blank" class="hover" style="font-size: 40px;font-family:华文行楷 " >
                     Atlas
                 </a>
-               
-                <span class="right"> 
+                <span class="right">
                     <a href="${servePath}" title='${indexLabel}'>${indexLabel}</a><a href='javascript:admin.logout();' title='${logoutLabel}'>${logoutLabel}</a>
                 </span>
             </div>
