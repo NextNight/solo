@@ -51,6 +51,11 @@
                     <i class="icon-eye-open"></i>
                 ${article.articleViewCount} ${viewLabel}
                 </span>
+                &nbsp; | &nbsp;
+                <span class="tooltipped tooltipped-n" aria-label="Author">
+                    <i class="icon-user"></i>
+                ${article.articleAuthorName}
+                </span>
                 <a href="${servePath}${article.articlePermalink}#more" rel="contents" class="fn-right tooltipped tooltipped-n">
                 ${readLabel} &raquo;
                 </a>
