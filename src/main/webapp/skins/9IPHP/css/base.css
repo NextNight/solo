@@ -2006,10 +2006,10 @@ aside.has-toc > section:last-child {
 
 /*self*/
 .Qm{
-    color:red;
-    text-align: left;
-    border: 1px dashed #b99d9d;
+    color: #1c1212;
+    text-align: center;
     padding: 15px;
+    background-color: rgba(255, 167, 158, 0.44);
 }
 .img-at-icon{
     float: left;

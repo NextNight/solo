@@ -43,16 +43,21 @@
                                         ${article.articleCreateDate?string("yyyy-MM-dd")}
                                     </time>
                                 </span>
-                                                &nbsp; | &nbsp;
-                                                <span class="tooltipped tooltipped-n" aria-label="${commentCountLabel}">
+                                 &nbsp; | &nbsp;
+                                <span class="tooltipped tooltipped-n" aria-label="${commentCountLabel}">
                                     <i class="icon-comments"></i>
                                     <a href="${servePath}${article.articlePermalink}#comments">
                                         ${article.articleCommentCount} ${commentLabel}</a>
                                 </span>
-                                                &nbsp; | &nbsp;
-                                                <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
+                                 &nbsp; | &nbsp;
+                                <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
                                     <i class="icon-views"></i>
                                     ${article.articleViewCount} ${viewLabel}
+                                </span>
+                                &nbsp; | &nbsp;
+                                <span class="tooltipped tooltipped-n" aria-label="Author">
+                                   <i class="icon-user"></i>
+                                   ${article.articleAuthorName}
                                 </span>
                             </div>
                         </header>
