@@ -575,12 +575,12 @@ button:hover {
 .icon-sortasc:before {
   content: "\e905";
 }
-a[class^="icon-"],
+a[class^="icon-"], 
 a[class*=" icon-"] {
     color: #333;
 }
 
-a[class^="icon-"]:hover,
+a[class^="icon-"]:hover, 
 a[class*=" icon-"]:hover {
     text-decoration: none;
     color: #4183c4;
