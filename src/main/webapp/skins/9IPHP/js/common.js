@@ -143,4 +143,10 @@ function recalpe(){
         document.getElementById('juanzeng').style.display='none';
     }
 }
+//Tab选项卡.
+$('.tab-nav li').mousemove(function(){
+    var liIndex = $('.tab-nav li').index(this);
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.tab-cont').eq(liIndex).fadeIn().siblings('.tab-cont').hide();
+});
 

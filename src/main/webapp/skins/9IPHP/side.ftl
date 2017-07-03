@@ -49,43 +49,52 @@
                 </main>
             </div>
         </#if>
-
-        <#if 0 != mostCommentArticles?size>
-            <div class="module">
-                <header><h2>${mostCommentArticlesLabel}</h2></header>
-                <main class="list">
-                    <ul>
-                        <#list mostCommentArticles as article>
-                            <li>
-                                <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
-                                   class="tooltipped tooltipped-e"
-                                   href="${servePath}${article.articlePermalink}">
-                                    <i class=" icon-star-empty " style="color: red"></i>${article.articleTitle}
-                                </a>
-                            </li>
-                        </#list>
-                    </ul>
-                </main>
-            </div>
-        </#if>
-
-        <#if 0 != mostViewCountArticles?size>
-            <div class="module">
-                <header><h2>${mostViewCountArticlesLabel}</h2></header>
-                <main class="list">
-                    <ul>
-                        <#list mostViewCountArticles as article>
-                            <li>
-                                <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
-                                   class="tooltipped tooltipped-e"
-                                   href="${servePath}${article.articlePermalink}">
-                                    <i class=" icon-heart" style="color: red"></i>${article.articleTitle}
-                                </a>
-                            </li>
-                        </#list>
-                    </ul>
-                </main>
-            </div>
-        </#if>
+            <!--<div class="panel-hd">按钮</div>-->
+                <div class="module card">
+                    <div class="card-header">
+                        <ul class="tab-nav">
+                            <li class="active"> <header>${mostCommentArticlesLabel}</header></li>
+                            <li class=""><header>${mostViewCountArticlesLabel}</header></li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont" style="display: block;">
+                    <#if 0 != mostCommentArticles?size>
+                        <div class="module">
+                            <main class="list">
+                                <ul>
+                                    <#list mostCommentArticles as article>
+                                        <li>
+                                            <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
+                                               class="tooltipped tooltipped-e"
+                                               href="${servePath}${article.articlePermalink}">
+                                                <i class=" icon-star-empty " style="color: red"></i>${article.articleTitle}
+                                            </a>
+                                        </li>
+                                    </#list>
+                                </ul>
+                            </main>
+                        </div>
+                    </#if>
+                    </div>
+                    <div class="tab-cont" style="display: none;">
+                    <#if 0 != mostViewCountArticles?size>
+                        <div class="module">
+                            <main class="list">
+                                <ul>
+                                    <#list mostViewCountArticles as article>
+                                        <li>
+                                            <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
+                                               class="tooltipped tooltipped-e"
+                                               href="${servePath}${article.articlePermalink}">
+                                                <i class=" icon-heart" style="color: red"></i>${article.articleTitle}
+                                            </a>
+                                        </li>
+                                    </#list>
+                                </ul>
+                            </main>
+                        </div>
+                    </#if>
+                    </div>
+                </div>
     </section>
 </aside>
