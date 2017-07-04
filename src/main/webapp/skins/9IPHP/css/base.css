@@ -1629,12 +1629,12 @@ a {
 }
 
 .module header h2 {
-    border-left: 3px solid #fc7a7a;
     padding: 10px;
     line-height: 12px;
     font-size: 15px;
     font-weight: 400;
-    background-color: #e4e0e0;
+    color: white;
+    background-color: #343232;
 }
 
 .module main {
@@ -2145,7 +2145,7 @@ aside.has-toc > section:last-child {
     color: #1c1212;
     text-align: center;
     padding: 15px;
-    background-color: rgba(255, 167, 158, 0.44);
+    background-color: rgb(255, 167, 158);
 }
 .img-at-icon{
     float: left;
