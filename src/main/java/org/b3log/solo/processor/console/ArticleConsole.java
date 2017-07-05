@@ -662,7 +662,7 @@ public class ArticleConsole {
 
             requestJSONObject.getJSONObject(Article.ARTICLE).put(Article.ARTICLE_AUTHOR_EMAIL, currentUser.getString(User.USER_EMAIL));
             /*RZX ADD 添加用户名*/
-            requestJSONObject.getJSONObject(Article.ARTICLE).put(Article.ARTICLE_AUTHOR_Name, currentUser.getString(User.USER_NAME));
+            requestJSONObject.getJSONObject(Article.ARTICLE).put(Article.ARTICLE_AUTHOR_NAME, currentUser.getString(User.USER_NAME));
 
             final String articleId = articleMgmtService.addArticle(requestJSONObject);
 

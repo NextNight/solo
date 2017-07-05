@@ -126,7 +126,7 @@ public final class Article {
     /**
      * Key of author email.
      */
-    public static final String ARTICLE_AUTHOR_Name = "articleAuthorName";
+    public static final String ARTICLE_AUTHOR_NAME = "articleAuthorName";
 
     /**
      * Key of had been published.

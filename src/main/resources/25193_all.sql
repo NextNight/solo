@@ -1,7 +1,7 @@
 ﻿SET FOREIGN_KEY_CHECKS = 0;
 
-DROP TABLE IF EXISTS  `b3_solo_archivedate`;
-CREATE TABLE `b3_solo_archivedate` (
+DROP TABLE IF EXISTS  `b3_solo_archiveDate`;
+CREATE TABLE `b3_solo_archiveDate` (
   `oId` varchar(255) NOT NULL,
   `archiveDateArticleCount` int(11) NOT NULL,
   `archiveDatePublishedArticleCount` int(11) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `b3_solo_archivedate` (
   PRIMARY KEY (`oId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-insert into `b3_solo_archivedate`(`oId`,`archiveDateArticleCount`,`archiveDatePublishedArticleCount`,`archiveTime`) values
+insert into `b3_solo_archiveDate`(`oId`,`archiveDateArticleCount`,`archiveDatePublishedArticleCount`,`archiveTime`) values
 ('1498230119994','16','14','1496246400000');
 DROP TABLE IF EXISTS  `b3_solo_archivedate_article`;
 CREATE TABLE `b3_solo_archivedate_article` (
@@ -19,7 +19,7 @@ CREATE TABLE `b3_solo_archivedate_article` (
   PRIMARY KEY (`oId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-insert into `b3_solo_archivedate_article`(`oId`,`archiveDate_oId`,`article_oId`) values
+insert into `b3_solo_archiveDate_article`(`oId`,`archiveDate_oId`,`article_oId`) values
 ('1498230120050','1498230119994','1498230119818'),
 ('1498234649215','1498230119994','1498234648708'),
 ('1498269909442','1498230119994','1498269909078'),

@@ -1107,6 +1107,9 @@ public class ArticleMgmtService {
         article.put(ARTICLE_PUT_TOP, oldArticle.getBoolean(ARTICLE_PUT_TOP));
         article.put(ARTICLE_HAD_BEEN_PUBLISHED, oldArticle.getBoolean(ARTICLE_HAD_BEEN_PUBLISHED));
         article.put(ARTICLE_AUTHOR_EMAIL, oldArticle.getString(ARTICLE_AUTHOR_EMAIL));
+        /*RZX ADD*/
+        article.put(ARTICLE_AUTHOR_NAME, oldArticle.getString(ARTICLE_AUTHOR_NAME));
+
         article.put(ARTICLE_RANDOM_DOUBLE, Math.random());
     }
 

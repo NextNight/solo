@@ -288,6 +288,7 @@ admin.article = {
             var articleContent = admin.editors.articleEditor.getContent(),
                     articleAbstract = admin.editors.abstractEditor.getContent();
 
+
             var requestJSONObject = {
                 "article": {
                     "oId": this.status.id,
