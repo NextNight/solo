@@ -53,6 +53,10 @@
                                                 <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
                                     <i class="icon-eye-open"></i>
                                     ${article.articleViewCount} ${viewLabel}
+                                                &nbsp; | &nbsp;
+                                                <span class="tooltipped tooltipped-n" aria-label="Author">
+                                    <i class="icon-user"></i>
+                                                ${article.articleAuthorName}
                                 </span>
                             </div>
                         </header>

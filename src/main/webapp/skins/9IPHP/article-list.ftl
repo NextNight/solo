@@ -2,11 +2,13 @@
     <#list articles as article>
     <article class="post">
     <#-- RZX ADD -->
+        <div class="img-at-icon">
         <#if article.articleAbstractIcon?exists>
-            <img class="img-at-icon"  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+            <img  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
         <#else>
-            <img class="img-at-icon"  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="${article.articleTitle}" title="${article.articleTitle}" />
+            <img  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="${article.articleTitle}" title="${article.articleTitle}" />
         </#if>
+        </div>
         <main class="content-reset fn-clear" >
                 <h1>
                     <a rel="bookmark" href="${servePath}${article.articlePermalink}">
