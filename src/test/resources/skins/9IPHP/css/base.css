@@ -910,9 +910,8 @@ aside {
 
 /* start side */
 aside .ad {
-    background-color: #3cbc8d;
     border-color: #36a96b;
-    color: #fff;
+    color: #7cffc6;
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid transparent;
@@ -934,8 +933,10 @@ aside .meta img {
 aside .tag.tooltipped {
     display: inline-block;
     padding: 2px 5px;
+    width: 60px;
     margin-bottom: 10px;
     border: 1px solid #e1e1e1;
+    background: transparent;
     text-decoration: none;
     margin-right: 10px;
     line-height: 22px;

@@ -6,16 +6,16 @@
     </form>
 </div>-->
 <div class="module fn-clear" >
-    <a href="#" style="width: 25%;float: left" p>
+    <a href="#" class="side-block">
         <i class="icon-envelope-alt" title="邮箱"></i>Email
     </a>
-    <a href="#" style="width: 25%;float: left">
+    <a href="#" class="side-block">
         <i class=" icon-github-sign"></i>Github
     </a>
-    <a href="#" style="width: 25%;float: left">
+    <a href="#" class="side-block">
         <i class=" icon-facebook-sign "></i>Facebook
     </a>
-    <a href="javascript:recalpe();" title="O(∩_∩)O土豪请打赏！！" style="background-color:deepskyblue;color: white;float: right">
+    <a href="javascript:recalpe();" title="O(∩_∩)O土豪请打赏！！" class="side-block">
                 <i class="icon-qrcode" ></i>打赏^_^
     </a>
 </div>

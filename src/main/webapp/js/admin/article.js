@@ -134,7 +134,8 @@ admin.article = {
                     }
                 }
                 /*RZX ADD*/
-                $("#articleAbstractIcon").val(result.article.articleAbstractIcon)
+                $("#articleAbstractIcon").val(result.article.articleAbstractIcon);
+                $("#articleAuthorName").val(result.article.articleAuthorName);
                 //alert(result.article.articleAbstractIcon)
                 $("#tag").val(tagsString);
                 $("#permalink").val(result.article.articlePermalink);
@@ -209,7 +210,7 @@ admin.article = {
             /*设置默认icon值*/
             var articleAbstractIcon = $("#articleAbstractIcon").val();
             if(articleAbstractIcon == "" || articleAbstractIcon == undefined || articleAbstractIcon == null){
-                articleAbstractIcon="http://os36ky6gs.bkt.clouddn.com/65dc39577aa7411d95848cd772fe34d4.png";
+                articleAbstractIcon="http://os36ky6gs.bkt.clouddn.com/3ddd52208a5c44ceb1229435df49150c.png";
             }
 
             var requestJSONObject = {

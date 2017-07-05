@@ -1,38 +1,35 @@
 <div>
     <#list articles as article>
     <article class="post">
-        <header>
-            <h1>
-                <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-                    ${article.articleTitle}
-                </a>
-                <#if article.articlePutTop>
-                <sup>
-                    ${topArticleLabel}
-                </sup>
-                </#if>
-                <#if article.hasUpdated>
-                <sup>
-                    ${updatedLabel}
-                </sup>
-                </#if>
-            </h1>
-
-        </header>
+    <#-- RZX ADD -->
+        <#if article.articleAbstractIcon?exists>
+            <img class="img-at-icon"  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+        <#else>
+            <img class="img-at-icon"  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="${article.articleTitle}" title="${article.articleTitle}" />
+        </#if>
         <main class="content-reset fn-clear" >
-            <#-- RZX ADD -->
-           <#if article.articleAbstractIcon?exists>
-                <img class="img-at-icon"  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
-           <#else>
-                <img class="img-at-icon"  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="${article.articleTitle}" title="${article.articleTitle}" />
-           </#if>
+                <h1>
+                    <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+                    ${article.articleTitle}
+                    </a>
+                    <#if article.articlePutTop>
+                        <sup>
+                        ${topArticleLabel}
+                        </sup>
+                    </#if>
+                    <#if article.hasUpdated>
+                        <sup>
+                        ${updatedLabel}
+                        </sup>
+                    </#if>
+                </h1>
             ${article.articleAbstract}
         </main>
         <footer class="fn-clear tags">
-            <#list article.articleTags?split(",") as articleTag>
+            <#--<#list article.articleTags?split(",") as articleTag>
                 <a class="tag " rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                 ${articleTag}</a>
-            </#list>
+            </#list>-->
             <div class="meta">
                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
                     <i class="icon-calendar"></i>

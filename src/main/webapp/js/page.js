@@ -445,12 +445,14 @@ $.extend(Page.prototype, {
                 for (var i = 0; i < randomArticles.length; i++) {
                     var article = randomArticles[i];
                     var title = article.articleTitle;
-                    var randomArticleLiHtml = "<li>" + "<a rel='nofollow' title='" + title + "' href='" + latkeConfig.servePath +
-                            article.articlePermalink + "'>" + title + "</a></li>";
+                    var randomArticleLiHtml = "<li class='foot-img-li'>"
+                        +"<img class='foot_image' src='"+article.articleAbstractIcon+"'>"
+                        + "<a rel='nofollow' title='" + title + "' href='"
+                        + latkeConfig.servePath + article.articlePermalink + "'>" + title + "</a></li>";
                     listHtml += randomArticleLiHtml;
                 }
 
-                var titleHTML = headTitle ? headTitle : "<header class='title'><h2>" + randomArticles1Label + "</h2></header>";
+                var titleHTML = headTitle ? headTitle:"<header class='title'><h1><i class='icon-list-ol'>" + randomArticles1Label + "</i></h1></header>";
                 var randomArticleListHtml = titleHTML + "<ul class='marginLeft12'>" + listHtml + "</ul>";
                 $("#randomArticles").append(randomArticleListHtml);
             }
@@ -475,12 +477,13 @@ $.extend(Page.prototype, {
                 for (var i = 0; i < articles.length; i++) {
                     var article = articles[i];
                     var title = article.articleTitle;
-                    var articleLiHtml = "<li>"
+                    var articleLiHtml = "<li class='foot-img-li'>"
+                            +"<img class='foot_image' src='"+article.articleAbstractIcon+"'>"
                             + "<a rel='nofollow' title='" + title + "' href='" + latkeConfig.servePath + article.articlePermalink + "'>"
                             + title + "</a></li>"
                     listHtml += articleLiHtml
                 }
-                var titleHTML = headTitle ? headTitle : "<header class='title'><h2>" + relevantArticlesLabel + "</h2></header>";
+                var titleHTML = headTitle ? headTitle : "<header class='title'><h1><i class='icon-list-ol'>" + relevantArticlesLabel + "</i></h1></header>";
                // var titleHTML = headTitle ? headTitle : "<h2>" + relevantArticlesLabel + "</h2>";
                 var relevantArticleListHtml = titleHTML
                         + "<ul class='marginLeft12'>"
@@ -519,13 +522,14 @@ $.extend(Page.prototype, {
                     for (var i = 0; i < articles.length; i++) {
                         var article = articles[i];
                         var title = article.articleTitle;
-                        var articleLiHtml = "<li>"
+                        var articleLiHtml = "<li class='foot-img-li'>"
+                                +"<img class='foot_image' src='"+article.articleAbstractIcon+"'>"
                                 + "<a rel='nofollow' title='" + title + "' target='_blank' href='" + article.articlePermalink + "'>"
                                 + title + "</a></li>"
                         listHtml += articleLiHtml
                     }
 
-                    var titleHTML = headTitle ? headTitle : "<h4>" + tips.externalRelevantArticles1Label + "</h4>";
+                    var titleHTML = headTitle ? headTitle : "<h1><i class='icon-list'>" + tips.externalRelevantArticles1Label + "</i></h1>";
                     var randomArticleListHtml = titleHTML
                             + "<ul class='marginLeft12'>"
                             + listHtml + "</ul>";

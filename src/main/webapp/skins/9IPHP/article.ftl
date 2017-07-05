@@ -51,7 +51,7 @@
                                 </span>
                                                 &nbsp; | &nbsp;
                                                 <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
-                                    <i class="icon-views"></i>
+                                    <i class="icon-eye-open"></i>
                                     ${article.articleViewCount} ${viewLabel}
                                 </span>
                             </div>
@@ -99,11 +99,9 @@
                                 </#if>
                             </div>
                         </footer>
-                        <div class="list module">
-                            <div id="randomArticles"  ></div>
-                            <div id="relevantArticles"  ></div>
-                            <div id="externalRelevantArticles"></div>
-                        </div>
+                        <div id="relevantArticles" class=" module fn-clear"  ></div>
+                        <div id="externalRelevantArticles" class=" module fn-clear"></div>
+                        <div id="randomArticles" class=" module fn-clear" ></div>
                     <@comments commentList=articleComments article=article></@comments>
                     </article>
                 </main>
@@ -119,10 +117,10 @@
             </#if>
             <#if 0 != externalRelevantArticlesDisplayCount>
             page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>"
-            , "<header class='title'><h2>${externalRelevantArticlesLabel}</h2></header>");
+            , "<header class='title'><h1><i class='icon-list'>${externalRelevantArticlesLabel}</i></h1></header>");
             </#if>
             <#if 0 != relevantArticlesDisplayCount>
-            page.loadRelevantArticles('${article.oId}', '<header class="title"><h2>${relevantArticlesLabel}</h2></header>');
+            page.loadRelevantArticles('${article.oId}', '<header class="title"><h1><i class="icon-list">${relevantArticlesLabel}</i></h1></header>');
             </#if>
         </@comment_script>
     </body>

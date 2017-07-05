@@ -150,3 +150,12 @@ $('.tab-nav li').mousemove(function(){
     $('.tab-cont').eq(liIndex).fadeIn().siblings('.tab-cont').hide();
 });
 
+$('post').mousemove(function(){
+    $('.post img').hover(function(){
+        $('.post img').stop(true,true).fadeOut('fast')
+    }, function(){
+        $('.post img').stop(true,true).fadeIn("fast")})
+    }
+
+);
+

@@ -23,10 +23,10 @@
         </#if>
         <#if 0 != mostUsedCategories?size>
             <div class="module">
-                <header><h2>${categoryLabel}</h2></header>
+                <header><h1><i class="icon-list-ol">${categoryLabel}</i></h1></header>
                 <main>
                     <#list mostUsedCategories as category>
-                        <a href="${servePath}/category/${category.categoryURI}"
+                        <a  href="${servePath}/category/${category.categoryURI}"
                            aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
                            class="tag tooltipped tooltipped-n">
                                 ${category.categoryTitle}</a>
@@ -34,15 +34,15 @@
                 </main>
             </div>
         </#if>
-
+        <br/>
         <#if 0 != mostUsedTags?size>
-            <div id="tagscloud" class="module">
-                <header><h2>${tagsLabel}</h2></header>
+            <div id="tagc" class="module">
+                <header><h1><i class="icon-list-ol">${tagsLabel}</i></h1></header>
                 <main>
                     <#list mostUsedTags as tag>
-                        <a rel="tag" data-count="${tag.tagPublishedRefCount}"
+                        <a  data-count="${tag.tagPublishedRefCount}"
                            href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
-                           class="tagc${tag_index%5}"
+                           class="tag tooltipped tooltipped-n tagc${tag_index%5}"
                            aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
                                 ${tag.tagTitle}(${tag.tagPublishedRefCount})</a>
                     </#list>
@@ -67,7 +67,8 @@
                                             <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
                                                class="tooltipped tooltipped-e"
                                                href="${servePath}${article.articlePermalink}">
-                                                <i class=" icon-star-empty " style="color: red"></i>${article.articleTitle}
+                                                <img style="" class=" ag_image" src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                                ${article.articleTitle}
                                             </a>
                                         </li>
                                     </#list>
@@ -86,7 +87,8 @@
                                             <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
                                                class="tooltipped tooltipped-e"
                                                href="${servePath}${article.articlePermalink}">
-                                                <i class=" icon-heart" style="color: red"></i>${article.articleTitle}
+                                                <img class=" ag_image" src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                            ${article.articleTitle}
                                             </a>
                                         </li>
                                     </#list>
