@@ -6,8 +6,8 @@
     </form>
 </div>-->
 <div class="module fn-clear" >
-    <a href="#" class="side-block">
-        <i class="icon-envelope-alt" title="邮箱"></i>Email
+    <a href="#" class="side-block" alt="邮箱:10321329190@qq.com/13572843652@163.com" title="邮箱:10321329190@qq.com/13572843652@163.com">
+        <i class="icon-envelope-alt"  ></i>Email
     </a>
     <a href="#" class="side-block">
         <i class=" icon-github-sign"></i>Github

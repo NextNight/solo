@@ -45,15 +45,15 @@
                 <a href="${servePath}/dynamic.html" rel="section">
                     <i class="icon-refresh"></i> ${dynamicLabel}
                 </a>
-                <#--<a href="${servePath}/tags.html" rel="section">
+                <a href="${servePath}/tags.html" rel="section">
                     <i class="icon-tags"></i> ${allTagsLabel}
-                </a>-->
+                </a>
                 <a href="${servePath}/archives.html">
                     <i class="icon-inbox"></i> ${archiveLabel}
                 </a>
-               <#-- <a rel="alternate" href="${servePath}/blog-articles-rss.do" rel="section">
+                <a rel="alternate" href="${servePath}/blog-articles-rss.do" rel="section">
                     <i class="icon-rss"></i> RSS
-                </a>-->
+                </a>
             </nav>
             <#--RZX
                 移除搜索框，到side-head

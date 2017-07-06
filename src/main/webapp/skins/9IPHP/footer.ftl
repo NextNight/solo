@@ -13,7 +13,7 @@
     Theme by <a href="https://github.com/9IPHP/9IPHP" target="_blank">9IPHP</a>&<a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>&<a href="${servePath}">Atlas</a>
 </footer>
 <#--RZX ADD-->
-<#include "thankArticle.ftl">
+<#--<#include "thankArticle.ftl">-->
 <div class="icon-up" title="回到顶部" onclick="Util.goTop()"></div>
 
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>

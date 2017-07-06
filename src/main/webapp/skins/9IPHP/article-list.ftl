@@ -23,7 +23,6 @@
                 </sup>
             </#if>
             </h2>
-
             ${article.articleAbstract}
         </main>
         <footer class="fn-clear tags">

@@ -64,12 +64,21 @@
                                 <ul>
                                     <#list mostCommentArticles as article>
                                         <li>
-                                            <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
-                                               class="tooltipped tooltipped-e"
-                                               href="${servePath}${article.articlePermalink}">
-                                                <img style="" class=" ag_image" src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                            <img  class="ag_image fn-left " src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                            <div class="fn-clear">
+                                            <a rel="nofollow" class="tooltipped tooltipped-e" href="${servePath}${article.articlePermalink}">
                                                 ${article.articleTitle}
                                             </a>
+                                             <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
+                                                <i class="icon-calendar"></i>
+                                                <time>
+                                                ${article.articleCreateDate?string("yyyy-MM-dd")}
+                                                </time>
+                                            </span>&nbsp;
+                                                <span class="tooltipped tooltipped-n fn-clear" aria-label="${commentCountLabel}">
+                                                 <i class="icon-comments"></i>${article.articleCommentCount}
+                                            </span>
+                                            </div>
                                         </li>
                                     </#list>
                                 </ul>
@@ -84,13 +93,23 @@
                                 <ul>
                                     <#list mostViewCountArticles as article>
                                         <li>
-                                            <a id="tagc" class="tagc${article_index%3}" rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
-                                               class="tooltipped tooltipped-e"
-                                               href="${servePath}${article.articlePermalink}">
-                                              <img class=" ag_image" src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                            <img class=" ag_image fn-left" src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                            <div>
+                                            <a  rel="nofollow" class="tooltipped tooltipped-e" href="${servePath}${article.articlePermalink}">
                                                  ${article.articleTitle}
                                             </a>
+                                            <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
+                                                <i class="icon-calendar"></i>
+                                                <time>
+                                                ${article.articleCreateDate?string("yyyy-MM-dd")}
+                                                </time>
+                                            </span>&nbsp;
+                                            <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
+                                                 <i class="icon-eye-open"></i>${article.articleViewCount}
+                                            </span>
+                                            </div>
                                         </li>
+
                                     </#list>
                                 </ul>
                             </main>
