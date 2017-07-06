@@ -84,11 +84,11 @@
                                 <ul>
                                     <#list mostViewCountArticles as article>
                                         <li>
-                                            <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
+                                            <a id="tagc" class="tagc${article_index%3}" rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
                                                class="tooltipped tooltipped-e"
                                                href="${servePath}${article.articlePermalink}">
-                                                <img class=" ag_image" src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
-                                            ${article.articleTitle}
+                                              <img class=" ag_image" src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                                 ${article.articleTitle}
                                             </a>
                                         </li>
                                     </#list>

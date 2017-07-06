@@ -5,26 +5,25 @@
         <div class="img-at-icon">
         <#if article.articleAbstractIcon?exists>
             <img  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
-        <#else>
-            <img  src="http://os36ky6gs.bkt.clouddn.com/xingkong.jpg" alt="${article.articleTitle}" title="${article.articleTitle}" />
         </#if>
         </div>
         <main class="content-reset fn-clear" >
-                <h1>
-                    <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-                    ${article.articleTitle}
-                    </a>
-                    <#if article.articlePutTop>
-                        <sup>
-                        ${topArticleLabel}
-                        </sup>
-                    </#if>
-                    <#if article.hasUpdated>
-                        <sup>
-                        ${updatedLabel}
-                        </sup>
-                    </#if>
-                </h1>
+            <h2>
+            <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+                ${article.articleTitle}
+            </a>
+            <#if article.articlePutTop>
+                <sup>
+                ${topArticleLabel}
+                </sup>
+            </#if>
+            <#if article.hasUpdated>
+                <sup>
+                ${updatedLabel}
+                </sup>
+            </#if>
+            </h2>
+
             ${article.articleAbstract}
         </main>
         <footer class="fn-clear tags">

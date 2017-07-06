@@ -55,7 +55,7 @@ import java.util.Date;
 
 /**
  * Comment receiver (from B3log Symphony).
- *
+ * 同步评论
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
  * @version 1.1.1.12, Apr 25, 2017
  * @since 0.5.5

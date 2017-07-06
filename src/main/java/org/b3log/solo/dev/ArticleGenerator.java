@@ -93,6 +93,8 @@ public class ArticleGenerator {
         try {
             final JSONObject admin = userQueryService.getAdmin();
             final String authorEmail = admin.optString(User.USER_EMAIL);
+            /*RZX ADD*/
+            final String authorName = admin.optString(User.USER_NAME);
 
             for (int i = 0; i < num; i++) {
                 final JSONObject article = new JSONObject();
@@ -103,6 +105,7 @@ public class ArticleGenerator {
 
                 article.put(Article.ARTICLE_TAGS_REF, "taga,tagb,tag" + i % deviationTag);
                 article.put(Article.ARTICLE_AUTHOR_EMAIL, authorEmail);
+                article.put(Article.ARTICLE_AUTHOR_NAME, authorName);
                 article.put(Article.ARTICLE_COMMENT_COUNT, 0);
                 article.put(Article.ARTICLE_VIEW_COUNT, 0);
                 article.put(Article.ARTICLE_CONTENT, "article content");

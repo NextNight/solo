@@ -110,7 +110,6 @@
                     </article>
                 </main>
             <#include "side.ftl">
-            <#include "ad-foot.ftl">
             </div>
         </div>
         <#include "footer.ftl">

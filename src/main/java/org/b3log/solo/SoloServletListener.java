@@ -125,8 +125,9 @@ final UpgradeService upgradeService = beanManager.getReference(UpgradeService.cl
 upgradeService.upgrade();
 
 // Import check (https://github.com/b3log/solo/issues/12293)
+/*RZX FiX
 final ImportService importService = beanManager.getReference(ImportService.class);
-importService.importMarkdowns();
+importService.importMarkdowns();*/
 
 JdbcRepository.dispose();
 

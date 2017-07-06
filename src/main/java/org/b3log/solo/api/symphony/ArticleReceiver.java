@@ -130,6 +130,11 @@ public class ArticleReceiver {
             final JSONObject admin = userQueryService.getAdmin();
 
             article.put(Article.ARTICLE_AUTHOR_EMAIL, admin.getString(User.USER_EMAIL));
+            /*RZX ADD 文章同步，添加用户名*/
+            article.put(Article.ARTICLE_AUTHOR_NAME, admin.getString(User.USER_NAME));
+           /*添加摘要图片
+            article.put(Article.ARTICLE_ABSTRACT_ICON, admin.getString(User.USER_NAME));
+            */
             final String articleContent = article.optString(Article.ARTICLE_CONTENT);
             article.put(Article.ARTICLE_ABSTRACT, Article.getAbstract(articleContent));
             article.put(Article.ARTICLE_IS_PUBLISHED, true);

@@ -121,6 +121,9 @@ public final class ArticleUpdater extends AbstractEventListener<JSONObject> {
             article.put(Article.ARTICLE_PERMALINK, originalArticle.getString(Article.ARTICLE_PERMALINK));
             article.put(Article.ARTICLE_TAGS_REF, originalArticle.getString(Article.ARTICLE_TAGS_REF));
             article.put(Article.ARTICLE_AUTHOR_EMAIL, originalArticle.getString(Article.ARTICLE_AUTHOR_EMAIL));
+            /*RZX ADD*/
+            article.put(Article.ARTICLE_AUTHOR_NAME, originalArticle.getString(Article.ARTICLE_AUTHOR_NAME));
+
             article.put(Article.ARTICLE_CONTENT, originalArticle.getString(Article.ARTICLE_CONTENT));
             article.put(Article.ARTICLE_CREATE_DATE, ((Date) originalArticle.get(Article.ARTICLE_CREATE_DATE)).getTime());
             article.put(Common.POST_TO_COMMUNITY, originalArticle.getBoolean(Common.POST_TO_COMMUNITY));
@@ -139,7 +142,8 @@ public final class ArticleUpdater extends AbstractEventListener<JSONObject> {
 
             httpRequest.setPayload(requestJSONObject.toString().getBytes("UTF-8"));
 
-            urlFetchService.fetchAsync(httpRequest);
+            /*RZX TODO 关闭同步*/
+            //urlFetchService.fetchAsync(httpRequest);
         } catch (final Exception e) {
             LOGGER.log(Level.ERROR, "Sends an article to Rhythm error: {0}", e.getMessage());
         }
