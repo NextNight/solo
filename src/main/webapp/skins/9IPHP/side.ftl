@@ -29,7 +29,7 @@
                         <a  href="${servePath}/category/${category.categoryURI}"
                            aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
                            class="tag tooltipped tooltipped-n">
-                                ${category.categoryTitle}</a>
+                               <i class="icon-globe"></i>${category.categoryTitle}</a>
                     </#list>
                 </main>
             </div>

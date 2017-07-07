@@ -1,16 +1,21 @@
 <footer class="footer fn-clear">
-    <a rel="archive" href="${servePath}/links.html">
-        <i class="icon-link"></i> ${linkLabel}
-    </a>
-    </br>
+    <div style="width: 70%;float: left" >
     &copy; ${year}
-    ${footerContent}
     <a href="${servePath}">${blogTitle}</a>  &nbsp;   • &nbsp;
     <a href="https://hacpai.com/tag/solo" target="_blank">Solo</a> ${version}  <br/>
 
-    Powered by <a href="http://b3log.org" target="_blank">B3log</a>开源&nbsp;
+    Powered by <a rel="nofollow" href="http://b3log.org" target="_blank">B3log</a>开源&nbsp;
     <span class="ft-warn">&heartsuit;</span>
-    Theme by <a href="https://github.com/9IPHP/9IPHP" target="_blank">9IPHP</a>&<a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>&<a href="${servePath}">Atlas</a>
+    Theme by <a rel="nofollow" href="https://github.com/9IPHP/9IPHP" target="_blank">9IPHP</a>&<a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>&<a href="${servePath}">Atlas</a>
+    </br> ${footerContent}
+    </div>
+    <div class="title" style="width: 30%;float: left;text-align: left;">
+        <#--友情链接：-->
+    <a rel="archive" href="${servePath}/links.html">
+        ${linkLabel}
+    </a>
+    <br>关于作者:
+    </div>
 </footer>
 <#--RZX ADD-->
 <#--<#include "thankArticle.ftl">-->

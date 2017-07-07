@@ -62,7 +62,7 @@
     </#list>
     <#if 0 != paginationPageCount>
         <div class="fn-clear">
-            <nav class="pagination" style="align-content: center">
+            <nav class="pagination fn-right">
                 <#if 1 != paginationPageNums?first>
                 <a href="${servePath}${path}/${paginationPreviousPageNum}" class="page-number">&laquo;</a>
                     <a class="page-number" href="${servePath}${path}/1">1</a> <span class="page-number">...</span>

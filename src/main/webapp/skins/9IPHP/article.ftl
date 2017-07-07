@@ -120,10 +120,10 @@
             </#if>
             <#if 0 != externalRelevantArticlesDisplayCount>
             page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>"
-            , "<header class='title'><h1><i class='icon-list'>${externalRelevantArticlesLabel}</i></h1></header>");
+            , "<header class='title'><h2><i class='icon-list'>${externalRelevantArticlesLabel}</i></h2></header>");
             </#if>
             <#if 0 != relevantArticlesDisplayCount>
-            page.loadRelevantArticles('${article.oId}', '<header class="title"><h1><i class="icon-list">${relevantArticlesLabel}</i></h1></header>');
+            page.loadRelevantArticles('${article.oId}', '<header class="title"><h2><i class="icon-list">${relevantArticlesLabel}</i></h2></header>');
             </#if>
         </@comment_script>
     </body>
