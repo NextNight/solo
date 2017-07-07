@@ -8,7 +8,7 @@
         </#if>
         </div>
         <main class="content-reset fn-clear" >
-            <h2>
+            <h2 class="list-h2">
             <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
             </a>
@@ -22,14 +22,16 @@
                 ${updatedLabel}
                 </sup>
             </#if>
+                <#list article.articleTags?split(",") as articleTag>
+                    <a class="tag fn-right list-tags"  rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                    [${articleTag}]&nbsp;</a>
+                </#list>
             </h2>
+
             ${article.articleAbstract}
         </main>
         <footer class="fn-clear tags">
-            <#--<#list article.articleTags?split(",") as articleTag>
-                <a class="tag " rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                ${articleTag}</a>
-            </#list>-->
+
             <div class="meta">
                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
                     <i class="icon-calendar"></i>

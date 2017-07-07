@@ -1,7 +1,7 @@
 <#include "macro-head.ftl">
 <#include "macro-comments.ftl">
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <@head title="${article.articleTitle} - ${blogTitle}">
         <meta name="keywords" content="${article.articleTags}" />
@@ -21,8 +21,9 @@
                 <main>
                     <article class="post">
                         <header>
+                            <span class="text-center">
                             <h1>
-                                <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+                                <a  rel="bookmark"  href="${servePath}${article.articlePermalink}">
                                     ${article.articleTitle}
                                 </a>
                                 <#if article.articlePutTop>
@@ -36,6 +37,7 @@
                                     </sup>
                                 </#if>
                             </h1>
+                            </span>
                             <div class="meta">
                                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
                                     <i class="icon-calendar"></i>
