@@ -270,7 +270,6 @@ blockquote {
     border-radius: 3px;
     color: #d23f31;
     font-family:"Menlo","Monaco","Consolas","微软雅黑","monospace";
-    font-style: italic;
 }
 .content-reset pre>code {
     padding: 0.5em;
@@ -1422,10 +1421,10 @@ a {
 }
 .foot-img-li{
     list-style: none;
-    width: 19.5%;
+    width: 24%;
     min-width: 120px;
     float: left;
-    padding-right: 3px;
+    padding-right: 8.9px;
     text-align: center;
 }
 
@@ -1697,10 +1696,10 @@ aside .tag.tooltipped {
     padding: 2px 8px;
     margin-bottom: 10px;
     border: 1px solid #e1e1e1;
-    width: 25.5%;
+    width: 26.0%;
     background-color: rgba(188, 188, 188, 0.07);
     text-decoration: none;
-    margin-right: 2px;
+    margin-right: 3px;
     line-height: 17px;
 }
 
@@ -1816,7 +1815,7 @@ aside.has-toc > section:last-child {
 .title h2 {
     font-size: 16px;
     font-weight: bold;
-    padding-bottom: 5px;
+    margin-bottom: 5px;
     border-bottom: 2px solid #eee;
     margin-top: 5px;
 }
@@ -1877,7 +1876,7 @@ aside.has-toc > section:last-child {
 }
 
 #commentForm {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .form .captcha {
@@ -2136,7 +2135,7 @@ aside.has-toc > section:last-child {
 
 /*---*/
 .side-block {
-    width: 24%;float: left;background-color:bisque;line-height: 70px;height: 70px;margin-right: 2px;margin-bottom: 2px;
+    width: 24%;float: left;background-color:bisque;line-height: 70px;height: 70px;margin-right: 3.5px;margin-bottom: 2px;
 }
 .ag_image {
     display: inline-block;

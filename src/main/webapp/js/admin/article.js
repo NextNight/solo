@@ -195,7 +195,6 @@ admin.article = {
         if (admin.article.validate()) {
             var that = this;
             that._addDisabled();
-
             $("#loadMsg").text(Label.loadingLabel);
             $("#tipMsg").text("");
             var signId = "";
@@ -206,11 +205,11 @@ admin.article = {
             });
 
             var articleContent = admin.editors.articleEditor.getContent(),
-                    articleAbstract = admin.editors.abstractEditor.getContent();
+                    articleAbstract = admin.editors.abstractEditor.getContent().substr(0,120)+"...";
             /*设置默认icon值*/
             var articleAbstractIcon = $("#articleAbstractIcon").val();
             if(articleAbstractIcon == "" || articleAbstractIcon == undefined || articleAbstractIcon == null){
-                articleAbstractIcon="http://os36ky6gs.bkt.clouddn.com/3ddd52208a5c44ceb1229435df49150c.png";
+                articleAbstractIcon="http://os36ky6gs.bkt.clouddn.com/2.png";
             }
 
             var requestJSONObject = {
