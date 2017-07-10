@@ -14,7 +14,7 @@
     <a rel="archive" href="${servePath}/links.html">
         ${linkLabel}
     </a>
-    <br>关于作者:
+    <br>关于作者
     </div>
 </footer>
 <#--RZX ADD-->
