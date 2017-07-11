@@ -8,8 +8,8 @@
         </#if>
         </div>
         <main class="content-reset fn-clear" >
-            <h2 class="list-h2">
-            <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+            <h2>
+            <a  rel="bookmark" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
             </a>
             <#if article.articlePutTop>

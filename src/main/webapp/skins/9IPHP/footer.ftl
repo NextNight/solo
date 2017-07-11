@@ -51,4 +51,14 @@
         "em14Label": "${em14Label}"
     };
 </script>
+<!-- atlasbl.cn Baidu tongji analytics -->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?90c94271e74eb14d414c615f6177e5e1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 ${plugins}
