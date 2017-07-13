@@ -8,18 +8,23 @@
         <link type="text/css" rel="stylesheet" href="${staticServePath}/css/default-admin${miniPostfix}.css?${staticResourceVersion}" />
         <link type="text/css" rel="stylesheet" href="${staticServePath}/js/lib/CodeMirrorEditor/codemirror.min.css?${staticResourceVersion}" />
         <link type="text/css" rel="stylesheet" href="${staticServePath}/js/lib/highlight.js-9.6.0/styles/github.css?${staticResourceVersion}" />
-        <link rel="icon" type="image/png" href="${staticServePath}/favicon.ico" />
+        <link rel="icon" type="image/png" href="${staticServePath}/favicon.png" />
     </head>
     <body onhashchange="admin.setCurByHash();">
         <div class="tip"><span id="loadMsg">${loadingLabel}</span></div>
         <div class="tip tip-msg"><span id="tipMsg"></span></div>
         <div id="allPanel">
             <div id="top">
-                <a href="http://b3log.org" target="_blank" class="hover" style="font-size: 40px;font-family:华文行楷 " >
-                    Atlas
+                <a href="http://b3log.org" target="_blank" class="hover">
+                    Solo
                 </a>
-                <span class="right">
-                    <a href="${servePath}" title='${indexLabel}'>${userName}</a><a href='javascript:admin.logout();' title='${logoutLabel}'>${logoutLabel}</a>
+               
+                <span class="right"> 
+                    <a href="${servePath}" title='${indexLabel}'>
+                        <div class="avatar" style="background-image: url(${gravatar})"></div>
+                        ${userName}
+                    </a>
+                    <a href='javascript:admin.logout();' title='${logoutLabel}'>${logoutLabel}</a>
                 </span>
             </div>
             <div id="tabs">
@@ -103,7 +108,7 @@
                                 <div id="tabs_others">
                                     <a href="#tools/others">${othersLabel}</a>
                                 </div>
-                            </li>
+                            </li>  
                         </ul>
                     </li>
                     <li>
