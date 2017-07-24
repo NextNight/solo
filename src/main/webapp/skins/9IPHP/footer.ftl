@@ -11,10 +11,9 @@
     </div>
     <div class="title" style="width: 30%;float: left;text-align: left;">
         <#--友情链接：-->
-    <a rel="archive" href="${servePath}/links.html">
-        ${linkLabel}
-    </a>
-    <br>关于作者
+    <a rel="archive" href="${servePath}/links.html"> ${linkLabel} </a>
+    <br>关于作者<br>
+    <a rel="archive" href="${servePath}/sitemap.xml">网站地图</a>
     </div>
 </footer>
 <#--RZX ADD-->
@@ -59,6 +58,20 @@
         hm.src = "https://hm.baidu.com/hm.js?90c94271e74eb14d414c615f6177e5e1";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
     })();
 </script>
 ${plugins}
