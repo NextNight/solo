@@ -14,7 +14,7 @@
                 <main>
                     <div class="title">
                         <h2 class="tip">
-                            <i class="icon-inbox"></i>
+                            <i class="fa fa-inbox"></i>
                             &nbsp;
                             <#if "en" == localeString?substring(0, 2)>
                             ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}

@@ -23,13 +23,13 @@
         </#if>
         <#if 0 != mostUsedCategories?size>
             <div class="module">
-                <header><h1><i class="icon-list-ol">${categoryLabel}</i></h1></header>
+                <header><h1><i class="fa fa-list-ol"></i> ${categoryLabel}</h1></header>
                 <main>
                     <#list mostUsedCategories as category>
                         <a  href="${servePath}/category/${category.categoryURI}"
                            aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
-                           class="tag tooltipped tooltipped-n">
-                               <i class="icon-globe"></i>${category.categoryTitle}</a>
+                           class="tag tooltipped tooltipped-n " >
+                               <i class="fa fa-globe pdlf-2"></i> ${category.categoryTitle}</a>
                     </#list>
                 </main>
             </div>
@@ -37,7 +37,7 @@
         <br/>
         <#if 0 != mostUsedTags?size>
             <div id="tagc" class="module">
-                <header><h1><i class="icon-list-ol">${tagsLabel}</i></h1></header>
+                <header><h1><i class="fa fa-tags"></i> ${tagsLabel}</h1></header>
                 <main>
                     <#list mostUsedTags as tag>
                         <a  data-count="${tag.tagPublishedRefCount}"
@@ -53,8 +53,8 @@
                 <div class="module card">
                     <div class="card-header">
                         <ul class="tab-nav">
-                            <li class="active"> <header>${mostCommentArticlesLabel}</header></li>
-                            <li class=""><header>${mostViewCountArticlesLabel}</header></li>
+                            <li class=""> <header><i class="fa fa-comment"></i> ${mostCommentArticlesLabel}</header></li>
+                            <li class="active"><header><i class="fa fa-eyedropper"></i> ${mostViewCountArticlesLabel}</header></li>
                         </ul>
                     </div>
                     <div class="tab-cont" style="display: block;">
@@ -70,13 +70,13 @@
                                                 ${article.articleTitle}
                                             </a>
                                              <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
-                                                <i class="icon-calendar"></i>
+                                                <i class="fa fa-calendar"></i>
                                                 <time>
                                                 ${article.articleCreateDate?string("yyyy-MM-dd")}
                                                 </time>
                                             </span>&nbsp;
                                                 <span class="tooltipped tooltipped-n fn-clear" aria-label="${commentCountLabel}">
-                                                 <i class="icon-comments"></i>${article.articleCommentCount}
+                                                 <i class="fa fa-comments"></i>${article.articleCommentCount}
                                             </span>
                                             </div>
                                         </li>
@@ -99,13 +99,13 @@
                                                  ${article.articleTitle}
                                             </a>
                                             <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
-                                                <i class="icon-calendar"></i>
+                                                <i class="fa fa-calendar"></i>
                                                 <time>
                                                 ${article.articleCreateDate?string("yyyy-MM-dd")}
                                                 </time>
                                             </span>&nbsp;
                                             <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
-                                                 <i class="icon-eye-open"></i>${article.articleViewCount}
+                                                 <i class="fa fa-eye"></i>${article.articleViewCount}
                                             </span>
                                             </div>
                                         </li>

@@ -40,24 +40,24 @@
                             </span>
                             <div class="meta">
                                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
-                                    <i class="icon-calendar"></i>
+                                    <i class="fa fa-calendar"></i>
                                     <time>
                                         ${article.articleCreateDate?string("yyyy-MM-dd")}
                                     </time>
                                 </span>
                                                 &nbsp; | &nbsp;
                                                 <span class="tooltipped tooltipped-n" aria-label="${commentCountLabel}">
-                                    <i class="icon-comments"></i>
+                                    <i class="fa fa-comments"></i>
                                     <a href="${servePath}${article.articlePermalink}#comments">
                                         ${article.articleCommentCount} ${commentLabel}</a>
                                 </span>
                                                 &nbsp; | &nbsp;
                                                 <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
-                                    <i class="icon-eye-open"></i>
+                                    <i class="fa fa-eye-open"></i>
                                     ${article.articleViewCount} ${viewLabel}
                                                 &nbsp; | &nbsp;
                                                 <span class="tooltipped tooltipped-n" aria-label="Author">
-                                    <i class="icon-user"></i>
+                                    <i class="fa fa-user"></i>
                                                 ${article.articleAuthorName}
                                 </span>
                             </div>
@@ -122,10 +122,10 @@
             </#if>
             <#if 0 != externalRelevantArticlesDisplayCount>
             page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>"
-            , "<header class='title'><h2><i class='icon-list'>${externalRelevantArticlesLabel}</i></h2></header>");
+            , "<header class='title'><h2><i class='fa fa-map-o'></i> ${externalRelevantArticlesLabel}</h2></header>");
             </#if>
             <#if 0 != relevantArticlesDisplayCount>
-            page.loadRelevantArticles('${article.oId}', '<header class="title"><h2><i class="icon-list">${relevantArticlesLabel}</i></h2></header>');
+            page.loadRelevantArticles('${article.oId}', '<header class="title"><h2><i class="fa fa-folder-open-o"></i> ${relevantArticlesLabel}</h2></header>');
             </#if>
         </@comment_script>
     </body>

@@ -13,7 +13,7 @@
             <div class="main-wrap">
                 <main class="other">
                     <div class="title">
-                        <h2><i class="icon-tags"></i>
+                        <h2><i class="fa fa-tags"></i>
                             &nbsp; ${sumLabel} ${tags?size} ${tagLabel}
                     </div>
                     <div class="tags">

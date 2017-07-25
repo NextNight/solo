@@ -1,6 +1,6 @@
 <footer class="footer fn-clear">
     <div style="width: 70%;float: left" >
-    &copy; ${year}
+    &copy; ${year}-07-07
     <a href="${servePath}">${blogTitle}</a>  &nbsp;   • &nbsp;
     <a href="https://hacpai.com/tag/solo" target="_blank">Solo</a> ${version}  <br/>
 
@@ -12,13 +12,12 @@
     <div class="title" style="width: 30%;float: left;text-align: left;">
         <#--友情链接：-->
     <a rel="archive" href="${servePath}/links.html"> ${linkLabel} </a>
-    <br>关于作者<br>
+            <br> <a href="${servePath}/aboutme.html">关于作者</a><br>
     <a rel="archive" href="${servePath}/sitemap.xml">网站地图</a>
     </div>
 </footer>
 <#--RZX ADD-->
-<#--<#include "thankArticle.ftl">-->
-<div class="icon-up" title="回到顶部" onclick="Util.goTop()"></div>
+<div class="icon-up fa fa-chevron-circle-up fa-2x" title="回到顶部" onclick="Util.goTop()"></div>
 
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>

@@ -13,7 +13,7 @@
             <div class="main-wrap">
                 <main class="other">
                     <span class="title">
-                         <h2><i class="icon-inbox"></i>
+                         <h2><i class="fa fa-inbox"></i>
                              &nbsp;${statistic.statisticPublishedBlogArticleCount} ${articleLabel}</h2>
                     </span>
                     <#if 0 != archiveDates?size>

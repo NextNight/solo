@@ -34,25 +34,25 @@
 
             <div class="meta">
                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
-                    <i class="icon-calendar"></i>
+                    <i class="fa fa-calendar"></i>
                     <time>
                          ${article.articleCreateDate?string("yyyy-MM-dd")}
                     </time>
                 </span>
                 &nbsp; | &nbsp;
                 <span class="tooltipped tooltipped-n" aria-label="${commentCountLabel}">
-                    <i class="icon-comments"></i>
+                    <i class="fa fa-comments"></i>
                     <a href="${servePath}${article.articlePermalink}#comments">
                         ${article.articleCommentCount} ${commentLabel}</a>
                 </span>
                 &nbsp; | &nbsp;
                 <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
-                    <i class="icon-eye-open"></i>
+                    <i class="fa fa-eye"></i>
                 ${article.articleViewCount} ${viewLabel}
                 </span>
                 &nbsp; | &nbsp;
                 <span class="tooltipped tooltipped-n" aria-label="Author">
-                    <i class="icon-user"></i>
+                    <i class="fa fa-user"></i>
                 ${article.articleAuthorName}
                 </span>
                 <a href="${servePath}${article.articlePermalink}#more" rel="contents" class="fn-right tooltipped tooltipped-n">

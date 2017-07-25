@@ -452,7 +452,7 @@ $.extend(Page.prototype, {
                     listHtml += randomArticleLiHtml;
                 }
 
-                var titleHTML = headTitle ? headTitle:"<header class='title'><h2><i class='icon-list'>" + randomArticles1Label + "</i></h2></header>";
+                var titleHTML = headTitle ? headTitle:"<header class='title'><h2><i class='fa fa-spinner'></i> " + randomArticles1Label + "</h2></header>";
                 var randomArticleListHtml = titleHTML + "<ul class='marginLeft12'>" + listHtml + "</ul>";
                 $("#randomArticles").append(randomArticleListHtml);
             }
@@ -483,7 +483,7 @@ $.extend(Page.prototype, {
                             + title + "</a></li>"
                     listHtml += articleLiHtml
                 }
-                var titleHTML = headTitle ? headTitle : "<header class='title'><h2><i class='icon-list'>" + relevantArticlesLabel + "</i></h2></header>";
+                var titleHTML = headTitle ? headTitle : "<header class='title'><h2><i class='fa fa-folder-open-o'></i> " + relevantArticlesLabel + "</h2></header>";
                // var titleHTML = headTitle ? headTitle : "<h2>" + relevantArticlesLabel + "</h2>";
                 var relevantArticleListHtml = titleHTML
                         + "<ul class='marginLeft12'>"
@@ -523,13 +523,13 @@ $.extend(Page.prototype, {
                         var article = articles[i];
                         var title = article.articleTitle;
                         var articleLiHtml = "<li style='list-style: none'>"
-                                +"<i class='icon-bookmark'></i>"
+                                +"<i class='fa fa-bookmark'></i> "
                                 + "<a rel='nofollow' title='" + title + "' target='_blank' href='" + article.articlePermalink + "'>"
                                 + title + "</a></li>"
                         listHtml += articleLiHtml
                     }
 
-                    var titleHTML = headTitle ? headTitle : "<h2><i class='icon-list'>" + tips.externalRelevantArticles1Label + "</i></h2>";
+                    var titleHTML = headTitle ? headTitle : "<h2><i class='fa fa-map-o'>" + tips.externalRelevantArticles1Label + "</i></h2>";
                     var randomArticleListHtml = titleHTML
                             + "<ul class='marginLeft12'>"
                             + listHtml + "</ul>";

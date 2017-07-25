@@ -13,7 +13,7 @@
             <div class="main-wrap">
                 <main class="other">
                     <div class="title">
-                         <h2><i class="icon-link"></i>
+                         <h2><i class="fa fa-link"></i>
                              &nbsp;${linkLabel}</h2>
                     </div>
                     <#if 0 != links?size>

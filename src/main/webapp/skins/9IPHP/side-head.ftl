@@ -5,18 +5,18 @@
         <input type="hidden" name="cc" value="${serverHost}">
     </form>
 </div>-->
-<div class="module fn-clear" >
+<div class="module fn-clear " style="text-align: center">
     <a href="#" class="side-block" alt="邮箱:10321329190@qq.com/13572843652@163.com" title="邮箱:10321329190@qq.com/13572843652@163.com">
-        <i class="icon-envelope-alt"  ></i>Email
+        <i class="fa fa-envelope-open"  ></i> Email
     </a>
     <a href="#" class="side-block">
-        <i class=" icon-github-sign"></i>Github
+        <i class=" fa fa-github-square"></i> Github
     </a>
     <a href="#" class="side-block">
-        <i class=" icon-facebook-sign "></i>Facebook
+        <i class=" fa fa-qq " alt="1031329190" title="1031329190"></i> QQ
     </a>
     <a href="javascript:recalpe();" title="O(∩_∩)O土豪请打赏！！" class="side-block">
-                <i class="icon-qrcode" ></i>打赏^_^
+                <i class="fa fa-qrcode" ></i> 打赏^_^
     </a>
 </div>
 <div  id="juanzeng" name="juanzeng" style="border: 1px solid whitesmoke;display: none">
