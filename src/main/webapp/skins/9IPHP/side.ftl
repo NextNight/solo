@@ -53,38 +53,9 @@
                 <div class="module card">
                     <div class="card-header">
                         <ul class="tab-nav">
-                            <li class=""> <header><i class="fa fa-comment"></i> ${mostCommentArticlesLabel}</header></li>
                             <li class="active"><header><i class="fa fa-eyedropper"></i> ${mostViewCountArticlesLabel}</header></li>
+                            <li class=""> <header><i class="fa fa-comment"></i> ${mostCommentArticlesLabel}</header></li>
                         </ul>
-                    </div>
-                    <div class="tab-cont" style="display: block;">
-                    <#if 0 != mostCommentArticles?size>
-                        <div class="module">
-                            <main class="list">
-                                <ul>
-                                    <#list mostCommentArticles as article>
-                                        <li>
-                                            <img  class="ag_image fn-left " src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
-                                            <div class="fn-clear">
-                                            <a rel="nofollow" class="tooltipped tooltipped-e" href="${servePath}${article.articlePermalink}">
-                                                ${article.articleTitle}
-                                            </a>
-                                             <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
-                                                <i class="fa fa-calendar"></i>
-                                                <time>
-                                                ${article.articleCreateDate?string("yyyy-MM-dd")}
-                                                </time>
-                                            </span>&nbsp;
-                                                <span class="tooltipped tooltipped-n fn-clear" aria-label="${commentCountLabel}">
-                                                 <i class="fa fa-comments"></i>${article.articleCommentCount}
-                                            </span>
-                                            </div>
-                                        </li>
-                                    </#list>
-                                </ul>
-                            </main>
-                        </div>
-                    </#if>
                     </div>
                     <div class="tab-cont" style="display: none;">
                     <#if 0 != mostViewCountArticles?size>
@@ -105,11 +76,40 @@
                                                 </time>
                                             </span>&nbsp;
                                             <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
-                                                 <i class="fa fa-eye"></i>${article.articleViewCount}
+                                                 <i class="fa fa-eye"></i> ${article.articleViewCount}
                                             </span>
                                             </div>
                                         </li>
 
+                                    </#list>
+                                </ul>
+                            </main>
+                        </div>
+                    </#if>
+                    </div>
+                    <div class="tab-cont" style="display: block;">
+                    <#if 0 != mostCommentArticles?size>
+                        <div class="module">
+                            <main class="list">
+                                <ul>
+                                    <#list mostCommentArticles as article>
+                                        <li>
+                                            <img  class="ag_image fn-left " src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+                                            <div class="fn-clear">
+                                                <a rel="nofollow" class="tooltipped tooltipped-e" href="${servePath}${article.articlePermalink}">
+                                                ${article.articleTitle}
+                                                </a>
+                                                <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
+                                                <i class="fa fa-calendar"></i>
+                                                <time>
+                                                ${article.articleCreateDate?string("yyyy-MM-dd")}
+                                                </time>
+                                            </span>&nbsp;
+                                                <span class="tooltipped tooltipped-n fn-clear" aria-label="${commentCountLabel}">
+                                                 <i class="fa fa-comments"></i> ${article.articleCommentCount}
+                                            </span>
+                                            </div>
+                                        </li>
                                     </#list>
                                 </ul>
                             </main>
