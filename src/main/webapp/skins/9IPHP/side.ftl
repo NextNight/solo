@@ -57,7 +57,7 @@
                             <li class=""> <header><i class="fa fa-comment"></i> ${mostCommentArticlesLabel}</header></li>
                         </ul>
                     </div>
-                    <div class="tab-cont" style="display: none;">
+                    <div class="tab-cont" style="display: block;">
                     <#if 0 != mostViewCountArticles?size>
                         <div class="module">
                             <main class="list">
@@ -87,7 +87,7 @@
                         </div>
                     </#if>
                     </div>
-                    <div class="tab-cont" style="display: block;">
+                    <div class="tab-cont" style="display: none;">
                     <#if 0 != mostCommentArticles?size>
                         <div class="module">
                             <main class="list">

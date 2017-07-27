@@ -77,6 +77,22 @@
                                 <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                                     ${articleTag}</a>
                             </#list>
+                                <div class="share" style="width: 40px;height: 125px">
+                                    <div id="share-weibo " style=" width: 30px;height: 30px; border: 1px solid #777777;text-align: center;padding: 5px;border-radius: 30px">
+                                        <i class="fa fa-2x fa-weibo"></i>
+                                    </div>
+                                    <div id="share-weibo " style=" width: 30px;height: 30px; border: 1px solid #777777;text-align: center;padding: 5px;border-radius: 30px">
+                                        <i class="fa fa-2x fa-weixin"></i>
+                                    </div>
+                                    <div id="share-weibo " style=" width: 30px;height: 30px; border: 1px solid #777777;text-align: center;padding: 5px;border-radius: 30px">
+                                        <i class="fa fa-2x fa-tencent-weibo"></i>
+                                    </div>
+                                <#--&nump;
+                                    <div id="share-wechat" class="fn-right" style="border: 1px solid #777777;padding: 10px">
+                                        <i class="fa fa-wechat tooltipped-n" style="padding-right: 5px"></i>
+                                    </div>
+                                    <div id="share-qzone"></div>-->
+                                <div>
 
                             <#-- div class="copyright">
                                 ${articleCP1Label}
