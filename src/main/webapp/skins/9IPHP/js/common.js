@@ -83,7 +83,8 @@ var Skin = {
             $('aside').prepend(articleTocHTML);
             var $sectionF = $('aside section:first').html($('.b3-solo-list')),
                     $sectionL = $('aside section:last');
-            $sectionF.height($(window).height() - 154).css({ 'overflow': 'auto', 'width':  $('aside').width() + 'px'});
+            /*RZX 修改目录宽度 修改宽度为最大宽度-40*/
+            $sectionF.height($(window).height() - 154).css({ 'overflow': 'auto','float':'right', 'max-width':  $('aside').width() + 'px','width':$('aside').width()-40+'px'});
             $sectionL.hide();
             // 切换 tab
             $('aside > ul > li').click(function () {
@@ -118,8 +119,8 @@ var Skin = {
                 if ($(window).scrollTop() > 125) {
                     $('aside section:eq(0)').css({
                         position: "fixed",
-                        top: "51px",
-                        backgroundColor: "#fff"
+                        top: "51px"
+                       /* backgroundColor: "#fff"*/
                     })
                 } else {
                     $('aside section:eq(0)').css({

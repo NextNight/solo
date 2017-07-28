@@ -77,24 +77,15 @@
                                 <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                                     ${articleTag}</a>
                             </#list>
-                                <div class="share" style="width: 40px;height: 125px">
-                                    <div id="share-weibo " style=" width: 30px;height: 30px; border: 1px solid #777777;text-align: center;padding: 5px;border-radius: 30px">
-                                        <i class="fa fa-2x fa-weibo"></i>
-                                    </div>
-                                    <div id="share-weibo " style=" width: 30px;height: 30px; border: 1px solid #777777;text-align: center;padding: 5px;border-radius: 30px">
-                                        <i class="fa fa-2x fa-weixin"></i>
-                                    </div>
-                                    <div id="share-weibo " style=" width: 30px;height: 30px; border: 1px solid #777777;text-align: center;padding: 5px;border-radius: 30px">
-                                        <i class="fa fa-2x fa-tencent-weibo"></i>
-                                    </div>
-                                <#--&nump;
-                                    <div id="share-wechat" class="fn-right" style="border: 1px solid #777777;padding: 10px">
-                                        <i class="fa fa-wechat tooltipped-n" style="padding-right: 5px"></i>
-                                    </div>
-                                    <div id="share-qzone"></div>-->
-                                <div>
+                                <div class="fn-right" >
+                                    <a   title="分享到微信" href="">
+                                        <i class="fa fa-weibo share-i" style="font-size: 20px"></i>
+                                    </a>
+                                    <i class="fa fa-weixin share-i" style="font-size: 20px"></i>
+                                    <i class="fa fa-tencent-weibo share-i" style="font-size: 20px" ></i>
+                                </div>
 
-                            <#-- div class="copyright">
+                            <#-- <div class="copyright">
                                 ${articleCP1Label}
                                 <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                                     ${article.articleTitle}
@@ -102,7 +93,7 @@
                                 <a href="${servePath}">
                                     ${blogTitle}
                                 </a>
-                            </div -->
+                            </div-->
 
                             <div class="rel fn-clear" style="border-bottom: 1px solid wheat">
                                 <#if previousArticlePermalink??>

@@ -981,18 +981,20 @@ aside.has-toc > section:last-child {
     color: #777777;
     font-size: 12px;
     display: inline-block;
+    border: 1px solid rgba(119, 119, 119, 0.18);
+    border-radius: 8px;
     margin-right: 5px;
-    padding: 0 2px;
+    padding: 0 6px;
     line-height: 18px;
     text-decoration: none;
     margin-top: 1px;
-    background-color:#fff5dd;
+    background-color: #fff5dd;
 }
 .tags > a.tag:before {
     content: "#";
 }
 .tags > a.tag:hover {
-    background: #999;
+    border-color:#777777;
 }
 
 .post footer .copyright {
@@ -1006,16 +1008,16 @@ aside.has-toc > section:last-child {
 
 .post .rel a {
     display: inline-block;
-    padding: 5px 14px;
+    padding: 2px 14px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 15px;
     text-decoration: none;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .post .rel a:hover {
-    border: 2px solid #777777;
+    border-color:  #777777;
 }
 
 .title h2 {
@@ -1231,11 +1233,31 @@ aside.has-toc > section:last-child {
 #tagc a.tagc5{background: rgba(211, 187, 238, 0.68);color:#fff;}
 #tagc a:hover{color:#fff;background:#0099ff;}
 
-/*sideBar ThankArtcle
-
-*/
-
-
+/*share-i*/
+/*.share-circle {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+}*/
+.share-i {
+    padding-right: 5px;
+    margin-right: 5px
+}
+.fa-weibo{
+    color: red;
+}
+.fa-weixin{
+    color: #00cc66;
+}
+.fa-tencent-weibo{
+    color: #00b0e8;
+}
+/*share-i end*/
 
 .card .card-header {
     border-bottom: 1px #d7dde4 solid;
