@@ -77,14 +77,16 @@
                                 <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                                     ${articleTag}</a>
                             </#list>
-                                <div class="fn-right" >
-                                    <a   title="分享到微信" href="">
+                                <div class="fn-right">
+                                    分享到：
+                                    <a   title="分享到微博" href="http://v.t.sina.com.cn/share/share.php?url=${servePath}${article.articlePermalink}&title=${article.articleTitle}">
                                         <i class="fa fa-weibo share-i" style="font-size: 20px"></i>
                                     </a>
-                                    <i class="fa fa-weixin share-i" style="font-size: 20px"></i>
-                                    <i class="fa fa-tencent-weibo share-i" style="font-size: 20px" ></i>
+                                          <i class="fa fa-weixin share-i" style="font-size: 20px"></i>
+                                    <a   title="分享到腾讯微博" href="http://v.t.qq.com/share/share.php?url=${servePath}${article.articlePermalink}">
+                                        <i class="fa fa-qq share-i" style="font-size: 20px" ></i>
+                                        </a>
                                 </div>
-
                             <#-- <div class="copyright">
                                 ${articleCP1Label}
                                 <a rel="bookmark" href="${servePath}${article.articlePermalink}">

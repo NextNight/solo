@@ -87,13 +87,13 @@ a:hover {
 sub,
 sup {
     position: relative;
-    font-size: 50%;
+    font-size: xx-small;
     color: red;
     line-height: 0;
     vertical-align: baseline
 }
 sup {
-    top: -0.5em
+    top: -0.4em
 }
 sub {
     bottom: -0.25em
@@ -153,9 +153,7 @@ blockquote {
     margin: 0
 }
 .content-reset {
-    font-family: "Menlo","Monaco","Consolas","微软雅黑","monospace";
     word-wrap: break-word;
-    color: #777777;
     overflow: auto;
     line-height: 1.5em;
     font-size: 12px;
@@ -165,9 +163,9 @@ p a{
     color: red;
 }
 
-*{
+/**{
     -webkit-transition: all 0.5s ease-out 0s;
-}
+}*/
 main h2 a{
     color: #777777;
 }
@@ -196,7 +194,8 @@ main h2 a{
 .content-reset h6 {
     margin-bottom: 8px;
     font-weight: 500;
-    line-height: 1.25
+    line-height: 1.25;
+    color: black;
 }
 .content-reset h1 {
     padding-bottom: 0.3em;
@@ -731,8 +730,8 @@ a {
 .wrapper {
     width: 90%;
     margin: 0 auto;
-    min-width: 720px;
-    max-width: 1300px;
+    min-width: 920px;
+    max-width: 1500px;
 }
 
 aside {
@@ -988,7 +987,6 @@ aside.has-toc > section:last-child {
     line-height: 18px;
     text-decoration: none;
     margin-top: 1px;
-    background-color: #fff5dd;
 }
 .tags > a.tag:before {
     content: "#";
@@ -1166,11 +1164,11 @@ aside.has-toc > section:last-child {
 
 /*self*/
 .Qm{
-    color: #777777;
+    color:#999;
+    border:1px solid #ccc;
     font-size: 13px;
     text-align: left;
     padding: 15px;
-    background-color: #ffe4c4;
 }
 .img-at-icon{
     float: left;
@@ -1246,15 +1244,16 @@ aside.has-toc > section:last-child {
 }*/
 .share-i {
     padding-right: 5px;
-    margin-right: 5px
+    margin-right: 5px;
+    color: #999;
 }
-.fa-weibo{
+.fa-weibo:hover{
     color: red;
 }
-.fa-weixin{
+.fa-weixin:hover{
     color: #00cc66;
 }
-.fa-tencent-weibo{
+.fa-qq:hover{
     color: #00b0e8;
 }
 /*share-i end*/
