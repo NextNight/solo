@@ -37,7 +37,7 @@ import java.util.*;
  * Import service.
  *
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 1.0.0.1, Jun 26, 2017
+ * @version 1.0.0.2, Jul 3, 2017
  * @since 2.2.0
  */
 @Service
@@ -65,6 +65,10 @@ public class ImportService {
     @Inject
     private UserQueryService userQueryService;
 
+    /**
+     * Imports markdowns files as articles. See <a href="https://hacpai.com/article/1498490209748">Solo 支持 Hexo/Jekyll 数据导入</a> for
+     * more details.
+     */
     public void importMarkdowns() {
         new Thread(() -> {
             final ServletContext servletContext = SoloServletListener.getServletContext();
@@ -87,6 +91,10 @@ public class ImportService {
             int succCnt = 0, failCnt = 0;
             final Set<String> failSet = new TreeSet<>();
             final Collection<File> mds = FileUtils.listFiles(new File(markdownsPath), new String[]{"md"}, true);
+            if (null == mds || mds.isEmpty()) {
+                return;
+            }
+
             for (final File md : mds) {
                 final String fileName = md.getName();
                 if (StringUtils.equalsIgnoreCase(fileName, "README.md")) {
@@ -111,6 +119,10 @@ public class ImportService {
                     failCnt++;
                     failSet.add(fileName);
                 }
+            }
+
+            if (0 == succCnt && 0 == failCnt) {
+                return;
             }
 
             final StringBuilder logBuilder = new StringBuilder();
@@ -162,7 +174,8 @@ public class ImportService {
         final String content = StringUtils.substringAfter(fileContent, frontMatter);
         ret.put(Article.ARTICLE_CONTENT, content);
 
-        ret.put(Article.ARTICLE_ABSTRACT, Article.getAbstract(content));
+        final String abs = parseAbstract(elems, content);
+        ret.put(Article.ARTICLE_ABSTRACT, abs);
 
         final Date date = parseDate(elems);
         ret.put(Article.ARTICLE_CREATE_DATE, date);
@@ -185,6 +198,21 @@ public class ImportService {
         ret.put(Article.ARTICLE_VIEW_PWD, "");
 
         return ret;
+    }
+
+    private String parseAbstract(final Map map, final String content) {
+        String ret = (String) map.get("description");
+        if (null == ret) {
+            ret = (String) map.get("summary");
+        }
+        if (null == ret) {
+            ret = (String) map.get("abstract");
+        }
+        if (StringUtils.isNotBlank(ret)) {
+            return ret;
+        }
+
+        return Article.getAbstract(content);
     }
 
     private Date parseDate(final Map map) {
