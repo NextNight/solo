@@ -29,8 +29,7 @@ body {
     margin: 0;
     font-family: "PingFang SC","Menlo","Monaco","Consolas","微软雅黑","monospace";
     font-size: 13px;
-    font-weight: 300;
-    color: #565656;
+    color: #777777;
 }
 ::-moz-selection {
     text-shadow: none;
@@ -193,24 +192,41 @@ main h2 a{
 .content-reset h5,
 .content-reset h6 {
     margin-bottom: 8px;
-    font-weight: 500;
     line-height: 1.25;
-    color: black;
+
 }
+
+.content-reset h2:before {
+    content: "❀ ";
+    color: red;
+}
+.content-reset h3:before {
+    content: "⚝ ";
+    color: red;
+}
+.content-reset h4:before {
+    content: "＠ ";
+    color: red;
+}
+
 .content-reset h1 {
     padding-bottom: 0.3em;
     font-size: 17px;
+    font-weight: 500;
     border-bottom: 1px solid #eee
 }
 .content-reset h2 {
     padding-bottom: 0.3em;
     font-size: 16px;
+    font-weight: 500;
     border-bottom: 1px solid #eee
 }
 .content-reset h3 {
     font-size: 14px;
+    font-weight: 500;
 }
 .content-reset h4 {
+    font-weight: 500;
     font-size: 13px;
 }
 .content-reset h5 {
