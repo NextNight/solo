@@ -269,7 +269,7 @@ public final class Markdowns {
             if (toEm != null && toEm.length > 0) {
                 for (final String em : toEm) {
                     final String search = "_" + em + "_";
-                    final String replace = "<em>" + em + "<em>";
+                    final String replace = "<em>" + em + "</em>";
                     ret = StringUtils.replace(ret, search, replace);
                 }
             }
