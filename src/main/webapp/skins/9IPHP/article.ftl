@@ -38,7 +38,8 @@
                                 </#if>
                             </h1>
                             </span>
-                            <div class="meta">
+                            <#--2017/8/11注释掉浏览相关信息 -->
+                            <#--<div class="meta">
                                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
                                     <i class="fa fa-calendar"></i>
                                     <time>
@@ -60,11 +61,12 @@
                                     <i class="fa fa-user"></i>
                                                 ${article.articleAuthorName}
                                 </span>
-                            </div>
+                            </div>-->
                         </header>
 
                         <div class="content-reset">
                             ${article.articleContent}
+                             <p style="text-align: center;margin: 5px;font-weight: 700"> . - - —— ————THE END——— —— - - .</p>
                             <#if "" != article.articleSign.signHTML?trim>
                                 <div>
                                     ${article.articleSign.signHTML}

@@ -1,14 +1,15 @@
 <div>
     <#list articles as article>
-    <article class="post">
+    <article class="post ">
     <#-- RZX ADD -->
+        <div class="post-list">
         <div class="img-at-icon">
         <#if article.articleAbstractIcon?exists>
             <img  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
         </#if>
         </div>
         <main class="content-reset fn-clear" >
-            <h2>
+            <h6>
             <a  rel="bookmark" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
             </a>
@@ -22,11 +23,11 @@
                 ${updatedLabel}
                 </sup>
             </#if>
-                <#list article.articleTags?split(",") as articleTag>
+                <#--<#list article.articleTags?split(",") as articleTag>
                     <a class="tag fn-right list-tags"  rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                     [${articleTag}]&nbsp;</a>
-                </#list>
-            </h2>
+                </#list>-->
+            </h6>
 
             ${article.articleAbstract}
         </main>
@@ -60,6 +61,7 @@
                 </a>
             </div>
         </footer>
+        </div>
     </article>
     </#list>
     <#if 0 != paginationPageCount>
