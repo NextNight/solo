@@ -195,7 +195,7 @@ main h6 a{
 .content-reset h6:before {
     content: "◉ ";
 }
-.content-reset h2:before {
+/*.content-reset h2:before {
     content: "◉ ";
 }
 .content-reset h3:before {
@@ -204,7 +204,7 @@ main h6 a{
 }
 .content-reset h4:before {
     content: "◉ ";
-}
+}*/
 
 .content-reset h1 {
     padding-bottom: 0.3em;
@@ -694,7 +694,7 @@ a {
     text-align: -webkit-left;
     display: block;
     padding-bottom: 5px;
-    color:rgba(77, 77, 77, 1)
+   /* color:rgba(77, 77, 77, 1)*/
 }
 .list li img{
     padding-right: 5px;

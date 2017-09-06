@@ -26,7 +26,11 @@
                 <#--<#list article.articleTags?split(",") as articleTag>
                     <a class="tag fn-right list-tags"  rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                     [${articleTag}]&nbsp;</a>
-                </#list>-->
+                </#list>
+                <span class="fn-right tooltipped tag" aria-label="Author">
+                By/${article.articleAuthorName}
+                -->
+            </span>
             </h6>
 
             ${article.articleAbstract}

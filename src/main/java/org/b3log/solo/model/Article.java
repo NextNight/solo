@@ -158,7 +158,7 @@ public final class Article {
     /**
      * Article abstract length.
      */
-    private static final int ARTICLE_ABSTRACT_LENGTH = 500;
+    private static final int ARTICLE_ABSTRACT_LENGTH = 200;
 
     /**
      * Private default constructor.

@@ -359,8 +359,10 @@
                 }
             ]
         },
+
+        //下载资源表
         {
-            "name": "user",
+            "name": "resourceDl",
             "keys": [
                 {
                     "name": "oId",
@@ -368,43 +370,39 @@
                     "length": 255
                 },
                 {
-                    "name": "userEmail",
+                    "name": "resourceName",
                     "type": "String",
                     "length": 255
                 },
                 {
-                    "name": "userName",
+                    "name": "resourceInstuction",
                     "type": "String",
                     "length": 255
                 },
                 {
-                    "name": "userURL",
+                    "name": "resourceUrl",
                     "type": "String",
                     "length": 255
                 },
                 {
-                    "name": "userPassword",
+                    "name": "resourceLikeCount",
+                    "type": "int",
+                    "length": 10
+                },
+                {
+                    "name": "resourceDlCount",
                     "type": "String",
                     "length": 255
                 },
                 {
-                    "name": "userRole",
-                    "type": "String",
-                    "length": 255
+                    "name": "resourceCreateDate",
+                    "type": "Date"
                 },
                 {
-                    "name": "userArticleCount",
-                    "type": "int"
-                },
-                {
-                    "name": "userPublishedArticleCount",
-                    "type": "int"
-                },
-                {
-                    "name": "userAvatar",
-                    "type": "String",
-                    "length": 255
+                    "name": "resourceUpdateDate",
+                    "type": "Date"
                 }
+
             ]
         },
         {
