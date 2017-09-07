@@ -102,12 +102,12 @@ public class ResourceConsole {
             final JSONObject requestJSONObject = Requests.buildPaginationRequest(path);
 
             final JSONArray excludes = new JSONArray();
-
+/*
             excludes.put(Resource.RESOURCE_NAME);
             excludes.put(Resource.RESOURCE_URL);
             excludes.put(Resource.RESOURCE_DL_COUNT);
             excludes.put(Resource.RESOURCE_LIKE_COUNT);
-            excludes.put(Resource.RESOURCE_INSTRUCTION);
+            excludes.put(Resource.RESOURCE_INSTRUCTION);*/
             requestJSONObject.put(Keys.EXCLUDES, excludes);
 
             final JSONObject result = resourceMgmtService.getResources(requestJSONObject);

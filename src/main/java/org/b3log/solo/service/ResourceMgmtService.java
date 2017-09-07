@@ -68,7 +68,8 @@ public class ResourceMgmtService {
                 final JSONObject resource = resources.getJSONObject(i);
                 resource.put(RESOURCE_CREATE_TIME, ((Date) resource.get(RESOURCE_CREATE_TIME)).getTime());
                 resource.put(RESOURCE_UPDATE_TIME, ((Date) resource.get(RESOURCE_UPDATE_TIME)).getTime());
-
+                resource.put(RESOURCE_NAME,resource.opt(RESOURCE_NAME));
+                resource.put(RESOURCE_URL,resource.opt(RESOURCE_URL));
                 // Remove unused properties
                 for (int j = 0; j < excludes.length(); j++) {
                     resource.remove(excludes.optString(j));

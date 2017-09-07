@@ -44,9 +44,8 @@
                         </div>
                         <ul id="tabArticleMgt">
                             <li>
-                                <div id="tabs_article">
+                                <div id="tabs_resource-list">
                                     <a href="#article/resource-list" >资源列表</a>
-                                      <#--  <a href="#article/article-list">资源列表</a>-->
                                 </div>
                             </li>
                             <li>
@@ -128,6 +127,7 @@
             </div>
             <div id="tabsPanel">
                 <div id="tabsPanel_main" class="none"></div>
+                <div id="tabsPanel_resource-list" class="none"></div>
                 <div id="tabsPanel_article" class="none"></div>
                 <div id="tabsPanel_article-list" class="none"></div>
                 <div id="tabsPanel_draft-list" class="none"></div>

@@ -213,6 +213,7 @@ public class AdminConsole {
             "/admin-others.do",
             "/admin-draft-list.do",
             "/admin-user-list.do",
+            "/admin-resource-list.do",
             "/admin-category-list.do",
             "/admin-plugin-list.do",
             "/admin-main.do",

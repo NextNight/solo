@@ -442,11 +442,13 @@
                 },
                 {
                     "name": "resourceCreateTime",
-                    "type": "Date"
+                    "type": "Date",
+                    "nullable": true
                 },
                 {
                     "name": "resourceUpdateTime",
-                    "type": "Date"
+                    "type": "Date",
+                    "nullable": true
                 }
 
             ]

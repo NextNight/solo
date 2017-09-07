@@ -1,6 +1,6 @@
 <div>
-    <div id="userTable"></div>
-    <div id="userPagination" class="margin12 right"></div>
+    <div id="resourceTable"></div>
+    <div id="resourcePagination" class="margin12 right"></div>
 </div>
 <div class="clear"></div>
 <table class="form" width="100%" cellpadding="0px" cellspacing="9px">
@@ -35,30 +35,30 @@
     </tr>
     </tbody>
 </table>
-<div id="userUpdate" class="none">
+<div id="resourceUpdate" class="none">
     <table class="form" width="100%" cellpadding="0px" cellspacing="9px">
         <thead>
         <tr>
             <th style="text-align: left" colspan="2">
-            ${updateUserLabel}
+              更新资源
             </th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <th width="48px">
-                <label for="userNameUpdate">${commentName1Label}</label>
+                <label for="resourceNameUpdate">资源名称</label>
             </th>
             <td>
-                <input id="userNameUpdate" type="text"/>
+                <input id="resourceNameUpdate" type="text"/>
             </td>
         </tr>
         <tr>
             <th>
-                <label for="userEmailUpdate">${commentEmail1Label}</label>
+                <label for="resourceUrlUpdate">资源地址</label>
             </th>
             <td>
-                <input id="userEmailUpdate" type="text"/>
+                <input id="resourceUrlUpdate" type="text"/>
             </td>
         </tr>
 

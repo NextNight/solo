@@ -27,7 +27,7 @@
 
 /* resources-list 相关操作 */
 admin.resourceList = {
-    tablePagination: new TablePaginate("resourcce"),
+    tablePagination: new TablePaginate("resource"),
     pageInfo: {
         currentCount: 1,
         pageCount: 1,
@@ -130,7 +130,7 @@ admin.resourceList = {
                     }
 
                     $("#resourceName").val("");
-                    $("#resourceName").val("");
+                    $("#resourceUrl").val("");
 
                     if (admin.resourceList.pageInfo.currentCount === Label.PAGE_SIZE &&
                         admin.resourceList.pageInfo.currentPage === admin.resourceList.pageInfo.pageCount) {
