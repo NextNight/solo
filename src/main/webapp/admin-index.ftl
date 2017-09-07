@@ -45,6 +45,12 @@
                         <ul id="tabArticleMgt">
                             <li>
                                 <div id="tabs_article">
+                                    <a href="#article/resource-list" >资源列表</a>
+                                      <#--  <a href="#article/article-list">资源列表</a>-->
+                                </div>
+                            </li>
+                            <li>
+                                <div id="tabs_article">
                                     <a href="#article/article" onclick="admin.article.prePost()">${postArticleLabel}</a>
                                 </div>
                             </li>
@@ -154,6 +160,7 @@
         <script src="${staticServePath}/js/admin/article.js"></script>
         <script src="${staticServePath}/js/admin/comment.js"></script>
         <script src="${staticServePath}/js/admin/articleList.js"></script>
+        <script src="${staticServePath}/js/admin/resourceList.js"></script>
         <script src="${staticServePath}/js/admin/draftList.js"></script>
         <script src="${staticServePath}/js/admin/pageList.js"></script>
         <script src="${staticServePath}/js/admin/others.js"></script>

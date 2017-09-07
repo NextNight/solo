@@ -359,10 +359,56 @@
                 }
             ]
         },
-
-        //下载资源表
         {
-            "name": "resourceDl",
+            "name": "user",
+            "keys": [
+                {
+                    "name": "oId",
+                    "type": "String",
+                    "length": 255
+                },
+                {
+                    "name": "userEmail",
+                    "type": "String",
+                    "length": 255
+                },
+                {
+                    "name": "userName",
+                    "type": "String",
+                    "length": 255
+                },
+                {
+                    "name": "userURL",
+                    "type": "String",
+                    "length": 255
+                },
+                {
+                    "name": "userPassword",
+                    "type": "String",
+                    "length": 255
+                },
+                {
+                    "name": "userRole",
+                    "type": "String",
+                    "length": 255
+                },
+                {
+                    "name": "userArticleCount",
+                    "type": "int"
+                },
+                {
+                    "name": "userPublishedArticleCount",
+                    "type": "int"
+                },
+                {
+                    "name": "userAvatar",
+                    "type": "String",
+                    "length": 255
+                }
+            ]
+        },
+        {
+            "name": "resource",
             "keys": [
                 {
                     "name": "oId",
@@ -391,15 +437,15 @@
                 },
                 {
                     "name": "resourceDlCount",
-                    "type": "String",
-                    "length": 255
+                    "type": "int",
+                    "length": 10
                 },
                 {
-                    "name": "resourceCreateDate",
+                    "name": "resourceCreateTime",
                     "type": "Date"
                 },
                 {
-                    "name": "resourceUpdateDate",
+                    "name": "resourceUpdateTime",
                     "type": "Date"
                 }
 
@@ -427,7 +473,8 @@
                     "name": "articleAbstractIcon",
                     "description": "List icon",
                     "type": "String",
-                    "length": 100
+                    "length": 100,
+                    "nullable": true
                 },
                 {
                     "name": "articleTags",

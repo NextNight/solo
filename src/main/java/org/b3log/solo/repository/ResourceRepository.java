@@ -6,4 +6,4 @@ import org.b3log.latke.repository.Repository;
  * Author:rzx
  * Date:2017/9/6
  */
-public interface ResourceDlRepository  extends Repository {}
+public interface ResourceRepository extends Repository {}

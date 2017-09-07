@@ -264,6 +264,10 @@ public abstract class AbstractTestCase {
         return beanManager.getReference(ArticleMgmtService.class);
     }
 
+    public ResourceMgmtService getResourceDlMgmtService(){
+        return beanManager.getReference(ResourceMgmtService.class);
+    }
+
     /**
      * Gets article query service.
      *

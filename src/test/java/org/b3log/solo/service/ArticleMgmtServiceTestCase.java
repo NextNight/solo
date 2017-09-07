@@ -70,6 +70,7 @@ public class ArticleMgmtServiceTestCase extends AbstractTestCase {
         requestJSONObject.put(Article.ARTICLE, article);
 
         article.put(Article.ARTICLE_AUTHOR_EMAIL, "test@gmail.com");
+        article.put(Article.ARTICLE_AUTHOR_NAME, "test@gmail.com");
         article.put(Article.ARTICLE_TITLE, "article1 title");
         article.put(Article.ARTICLE_ABSTRACT, "article1 abstract");
         article.put(Article.ARTICLE_CONTENT, "article1 content");

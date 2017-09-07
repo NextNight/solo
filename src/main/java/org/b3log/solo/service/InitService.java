@@ -308,7 +308,9 @@ public class InitService {
         article.put(Article.ARTICLE_RANDOM_DOUBLE, Math.random());
         article.put(Article.ARTICLE_AUTHOR_EMAIL, authorEmail);
         article.put(Article.ARTICLE_COMMENTABLE, true);
+        article.put(Article.ARTICLE_ABSTRACT_ICON, "ARTICLE_ABSTRACT_ICON");
         article.put(Article.ARTICLE_VIEW_PWD, "");
+        article.put(Article.ARTICLE_AUTHOR_NAME, "22222");
         article.put(Article.ARTICLE_EDITOR_TYPE, DefaultPreference.DEFAULT_EDITOR_TYPE);
 
         final String articleId = addHelloWorldArticle(article);
