@@ -180,9 +180,10 @@ public class CommentMgmtService {
                                      final JSONObject originalComment,
                                      final JSONObject preference) throws IOException, JSONException {
         if (!Mails.isConfigured()) {
+            System.out.println("Mails.isConfigured()==false");
             return;
         }
-
+        System.out.println("__________SEND EMAIL____________");
         final String commentEmail = comment.getString(Comment.COMMENT_EMAIL);
         final String commentId = comment.getString(Keys.OBJECT_ID);
         final String commentContent = comment.getString(Comment.COMMENT_CONTENT);
@@ -194,12 +195,12 @@ public class CommentMgmtService {
 
             return;
         }
-
-        if (Latkes.getServePath().contains("localhost")) {
+        //rzx TODO
+      /*  if (Latkes.getServePath().contains("localhost")) {
             LOGGER.log(Level.INFO, "Solo runs on local server, so should not send mail");
 
             return;
-        }
+        }*/
 
         if (null != originalComment && comment.has(Comment.COMMENT_ORIGINAL_COMMENT_ID)) {
             final String originalEmail = originalComment.getString(Comment.COMMENT_EMAIL);
@@ -620,7 +621,7 @@ public class CommentMgmtService {
             // Step 3: Update blog statistic comment count
             statisticMgmtService.incBlogCommentCount();
             statisticMgmtService.incPublishedBlogCommentCount();
-            // Step 4: Send an email to admin
+            // Step 4: Send an email to admin 发送邮件
             try {
                 sendNotificationMail(article, comment, originalComment, preference);
             } catch (final Exception e) {

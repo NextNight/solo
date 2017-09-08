@@ -6,7 +6,6 @@ import org.b3log.latke.Latkes;
 import org.b3log.latke.ioc.inject.Inject;
 import org.b3log.latke.logging.Level;
 import org.b3log.latke.logging.Logger;
-import org.b3log.latke.model.User;
 import org.b3log.latke.service.LangPropsService;
 import org.b3log.latke.service.ServiceException;
 import org.b3log.latke.servlet.HTTPRequestContext;
@@ -15,9 +14,6 @@ import org.b3log.latke.servlet.annotation.RequestProcessing;
 import org.b3log.latke.servlet.annotation.RequestProcessor;
 import org.b3log.latke.servlet.renderer.JSONRenderer;
 import org.b3log.latke.util.Requests;
-import org.b3log.solo.model.Article;
-import org.b3log.solo.model.Resource;
-import org.b3log.solo.service.ArticleMgmtService;
 import org.b3log.solo.service.ResourceMgmtService;
 import org.b3log.solo.service.UserQueryService;
 import org.b3log.solo.util.QueryResults;
@@ -64,7 +60,7 @@ public class ResourceConsole {
 
             // final JSONObject currentUser = userQueryService.getCurrentUser(request);
 
-            final String resourceId = resourceMgmtService.addResouce(requestJSONObject);
+            final String resourceId = resourceMgmtService.addResource(requestJSONObject);
 
             ret.put(Keys.OBJECT_ID, resourceId);
             ret.put(Keys.MSG, langPropsService.get("addSuccLabel"));

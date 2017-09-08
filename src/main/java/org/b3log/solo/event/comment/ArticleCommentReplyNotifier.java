@@ -74,12 +74,12 @@ public final class ArticleCommentReplyNotifier extends AbstractEventListener<JSO
 
             return;
         }
-
+/*
         if (Latkes.getServePath().contains("localhost")) {
             LOGGER.log(Level.INFO, "Solo runs on local server, so should not send mail");
 
             return;
-        }
+        }*/
 
         if (!Mails.isConfigured()) {
             return;

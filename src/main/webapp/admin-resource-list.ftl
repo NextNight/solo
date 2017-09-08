@@ -14,7 +14,7 @@
     <tbody>
     <tr>
         <th width="48px">
-            <label for="resourceName">资源名称</label>
+            <label for="resourceName">名称</label>
         </th>
         <td>
             <input id="resourceName" type="text"/>
@@ -26,6 +26,14 @@
         </th>
         <td>
             <input id="resourceUrl" type="text"/>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label for="resourceInstruction">简介</label>
+        </th>
+        <td>
+            <textarea id="resourceInstruction" />
         </td>
     </tr>
     <tr>
@@ -47,7 +55,7 @@
         <tbody>
         <tr>
             <th width="48px">
-                <label for="resourceNameUpdate">资源名称</label>
+                <label for="resourceNameUpdate">名称</label>
             </th>
             <td>
                 <input id="resourceNameUpdate" type="text"/>
@@ -55,13 +63,20 @@
         </tr>
         <tr>
             <th>
-                <label for="resourceUrlUpdate">资源地址</label>
+                <label for="resourceUrlUpdate"></label>
             </th>
             <td>
                 <input id="resourceUrlUpdate" type="text"/>
             </td>
         </tr>
-
+        <tr>
+            <th>
+                <label for="resourceInstruction">简介</label>
+            </th>
+            <td>
+                <textarea id="resourceInstruction" />
+            </td>
+        </tr>
         <tr>
             <td colspan="2" align="right">
                 <button onclick="admin.resourceList.update();">${updateLabel}</button>

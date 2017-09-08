@@ -89,17 +89,24 @@ public class ResourceMgmtService {
      * @param requestJSONObject
      * @return
      */
-    public String addResouce(final JSONObject requestJSONObject) throws ServiceException {
+    public String addResource(final JSONObject requestJSONObject) throws ServiceException {
         final Transaction transaction = resourceRepository.beginTransaction();
-
+        final JSONObject resource = new JSONObject();
         try {
-            final JSONObject resource = requestJSONObject.getJSONObject(Resource.RESOURCE);
+            final String resourceName = requestJSONObject.optString(Resource.RESOURCE_NAME);
+            final String resourceUrl = requestJSONObject.optString(Resource.RESOURCE_URL);
+            final String resourceInstruction = requestJSONObject.optString(Resource.RESOURCE_INSTRUCTION);
+            resource.put(RESOURCE_NAME,resourceName);
+            resource.put(RESOURCE_URL,resourceUrl);
+            resource.put(RESOURCE_INSTRUCTION,resourceInstruction);
+            resource.put(RESOURCE_DL_COUNT,0);
+            resource.put(RESOURCE_LIKE_COUNT,0);
+            resource.put(RESOURCE_CREATE_TIME,new Date());
+            resource.put(RESOURCE_UPDATE_TIME,new Date());
 
-            final String ret = addResouceDlInternal(resource);
-
+            final String ret = resourceRepository.add(resource);
             transaction.commit();
-
-            return ret;
+            return resource.optString(Keys.OBJECT_ID);
         } catch (final Exception e) {
             if (transaction.isActive()) {
                 transaction.rollback();
@@ -107,51 +114,6 @@ public class ResourceMgmtService {
             throw new ServiceException(e.getMessage());
         }
     }
-    /**
-     * 添加资源
-     * @param resouce
-     * @return
-     * @throws ServiceException
-     */
-    public String addResouceDlInternal(final JSONObject resouce) throws ServiceException {
-        String ret = resouce.optString(Keys.OBJECT_ID);
-
-        if (Strings.isEmptyOrNull(ret)) {
-            ret = Ids.genTimeMillisId();
-            resouce.put(Keys.OBJECT_ID, ret);
-        }
-
-        try {
-            String resourceName = resouce.optString(Resource.RESOURCE_NAME);
-            String resourceInstruction = resouce.optString(Resource.RESOURCE_INSTRUCTION);
-            String resourceUrl = resouce.optString(Resource.RESOURCE_URL);
-            String resourceLikeCount = resouce.optString(Resource.RESOURCE_LIKE_COUNT);
-            String resourceDlCount = resouce.optString(Resource.RESOURCE_DL_COUNT);
-
-            resouce.put(Resource.RESOURCE_NAME,resourceName);
-            resouce.put(Resource.RESOURCE_URL,resourceUrl);
-            resouce.put(Resource.RESOURCE_LIKE_COUNT,resourceLikeCount);
-            resouce.put(Resource.RESOURCE_INSTRUCTION,resourceInstruction);
-            resouce.put(Resource.RESOURCE_NAME,resourceName);
-            resouce.put(Resource.RESOURCE_DL_COUNT,resourceDlCount);
-
-            final Date date = new Date();
-
-            if (!resouce.has(Resource.RESOURCE_CREATE_TIME)) {
-                resouce.put(Resource.RESOURCE_CREATE_TIME, date);
-            }
-            resouce.put(Resource.RESOURCE_UPDATE_TIME,date);
-
-            resourceRepository.add(resouce);
-        } catch (final RepositoryException e) {
-            LOGGER.log(Level.ERROR, "Adds an Resource failed", e);
-
-            throw new ServiceException(e);
-        }
-
-        return ret;
-    }
-
     public void setResourceRepository(ResourceRepository resourceRepository) {
         this.resourceRepository = resourceRepository;
     }

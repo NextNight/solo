@@ -42,13 +42,23 @@ admin.resourceList = {
     init: function(page) {
         this.tablePagination.buildTable([{
             style: "padding-left: 12px;",
-            text: "resourceName",
+            text: "资源名称",
             index: "resourceName",
             width: 230
         }, {
             style: "padding-left: 12px;",
-            text: "resourceUrl",
+            text: "资源地址",
             index: "resourceUrl",
+            minWidth: 180
+        },{
+            style: "padding-left: 12px;",
+            text: "资源下载量",
+            index: "resourceDlCount",
+            minWidth: 180
+        },{
+            style: "padding-left: 12px;",
+            text: "喜欢人数",
+            index: "resourceLikeCount",
             minWidth: 180
         }]);
 
@@ -97,6 +107,8 @@ admin.resourceList = {
                     resourceData[i] = {};
                     resourceData[i].resourceName = resources[i].resourceName;
                     resourceData[i].resourceUrl = resources[i].resourceUrl;
+                    resourceData[i].resourceDlCount = resources[i].resourceDlCount;
+                    resourceData[i].resourceLikeCount = resources[i].resourceLikeCount;
                     that.tablePagination.updateTablePagination(resourceData, pageNum, result.pagination);
 
                     $("#loadMsg").text("");
@@ -108,13 +120,14 @@ admin.resourceList = {
      * 添加资源
      */
     add: function() {
-        if (this.validate()) {
+        /*if (this.validate()) {暂时忽略校验*/
             $("#loadMsg").text(Label.loadingLabel);
             $("#tipMsg").text("");
 
             var requestJSONObject = {
                 "resourceName": $("#resourceName").val(),
-                "resourceUrl": $("#resourceUrl").val()
+                "resourceUrl": $("#resourceUrl").val(),
+                "resourceInstruction": $("#resourceInstruction").val()
             };
 
             $.ajax({
@@ -131,6 +144,7 @@ admin.resourceList = {
 
                     $("#resourceName").val("");
                     $("#resourceUrl").val("");
+                    $("#resourceInstruction").val("");
 
                     if (admin.resourceList.pageInfo.currentCount === Label.PAGE_SIZE &&
                         admin.resourceList.pageInfo.currentPage === admin.resourceList.pageInfo.pageCount) {
@@ -146,7 +160,7 @@ admin.resourceList = {
                     $("#loadMsg").text("");
                 }
             });
-        }
+       /* }*/
     }
 };
 

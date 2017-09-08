@@ -9,7 +9,7 @@ public final class Resource {
     public static final String RESOURCE = "resource";
     public static final String RESOURCES = "resources";
     public static final String RESOURCE_NAME = "resourceName";
-    public static final String RESOURCE_INSTRUCTION = "resourceInstuction";
+    public static final String RESOURCE_INSTRUCTION = "resourceInstruction";
     public static final String RESOURCE_URL = "resourceUrl";
     public static final String RESOURCE_LIKE_COUNT= "resourceLikeCount";
     public static final String RESOURCE_DL_COUNT = "resourceDlCount";

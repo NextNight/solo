@@ -421,7 +421,7 @@
                     "length": 255
                 },
                 {
-                    "name": "resourceInstuction",
+                    "name": "resourceInstruction",
                     "type": "String",
                     "length": 255
                 },

@@ -26,7 +26,7 @@ import java.util.ResourceBundle;
  * @version 1.0.0.0, Jul 20, 2017
  * @since 2.3.0
  */
-public final class Mails {
+public final class   Mails {
 
     /**
      * Mail configuration (mail.properties).

@@ -56,7 +56,7 @@ public class ResourceMgmtServiceTestCase extends AbstractTestCase {
             resource.put(Resource.RESOURCE_CREATE_TIME, new Date());
             resource.put(Resource.RESOURCE_UPDATE_TIME, new Date());
 
-            final String resouceDlId = resourceDlMgmtServic.addResouce(requestJSONObject);
+            final String resouceDlId = resourceDlMgmtServic.addResource(requestJSONObject);
             System.out.println(resouceDlId);
             Assert.assertNotNull(resouceDlId);
         }
