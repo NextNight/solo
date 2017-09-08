@@ -68,6 +68,13 @@
         </div>
     </article>
     </#list>
+        <div>
+        <#list resources as resource>
+        <#if resource>
+            <li>${resource.resourceName}</li>
+        </#if>
+        </#list>
+        </div>
     <#if 0 != paginationPageCount>
         <div class="fn-clear">
             <nav class="pagination fn-right">

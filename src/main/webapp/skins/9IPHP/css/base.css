@@ -705,7 +705,7 @@ a {
 
 .list a:hover {
     color: #f16e50;
-    -webkit-transform: scale(0.9);
+/*    -webkit-transform: scale(0.9);*/
 }
 
 .form input,

@@ -183,6 +183,8 @@ public class Filler {
     @Inject
     private LangPropsService langPropsService;
 
+    @Inject
+    private ResourceRepository resourceRepository;
     /**
      * Fills articles in index.ftl.
      *
@@ -726,6 +728,31 @@ public class Filler {
             Stopwatchs.end();
         }
     }
+
+    public void fillResources(final HttpServletRequest request,
+                               final Map<String, Object> dataModel, final JSONObject preference) throws ServiceException {
+        Stopwatchs.start("fillResources");
+        try {
+            final int pageSize = preference.getInt(Option.ID_C_ARTICLE_LIST_DISPLAY_COUNT);
+            final int windowSize = preference.getInt(Option.ID_C_ARTICLE_LIST_PAGINATION_WINDOW_SIZE);
+            final JSONObject statistic = statisticQueryService.getStatistic();
+            final Query query = new Query().addSort(Resource.RESOURCE_LIKE_COUNT,SortDirection.DESCENDING);
+            final Template template = Templates.getTemplate((String) request.getAttribute(Keys.TEMAPLTE_DIR_NAME), "index.ftl");
+            final JSONObject result = articleRepository.get(query);
+            final List<JSONObject> resources = org.b3log.latke.util.CollectionUtils.jsonArrayToList(result.getJSONArray(Keys.RESULTS));
+            dataModel.put(Resource.RESOURCES,resources);
+
+        } catch (final JSONException e) {
+            LOGGER.log(Level.ERROR, "Fills resource  failed", e);
+           /* throw new ServiceException(e);*/
+        } catch (final RepositoryException e) {
+            LOGGER.log(Level.ERROR, "Fills resource failed", e);
+            throw new ServiceException(e);
+        } finally {
+            Stopwatchs.end();
+        }
+    }
+
 
     /**
      * Fills minified directory and file postfix for static JavaScript, CSS.
