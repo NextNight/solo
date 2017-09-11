@@ -28,6 +28,7 @@
         <div class="wrapper">
             <div class="main-wrap">
                 <main>
+                    <#include "resource-list.ftl">
                     <#include "article-list.ftl">
                 </main>
                 <#include "side.ftl">

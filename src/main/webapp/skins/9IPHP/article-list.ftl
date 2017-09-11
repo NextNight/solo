@@ -1,11 +1,11 @@
-<div>
+<div class="module" >
     <#list articles as article>
     <article class="post ">
     <#-- RZX ADD -->
         <div class="post-list">
-        <div class="img-at-icon">
+        <div class="img-at-icon ">
         <#if article.articleAbstractIcon?exists>
-            <img  src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
+            <img src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
         </#if>
         </div>
         <main class="content-reset fn-clear" >
@@ -23,7 +23,8 @@
                 ${updatedLabel}
                 </sup>
             </#if>
-                <#--<#list article.articleTags?split(",") as articleTag>
+                <#--RZX去掉list中的标签
+                <#list article.articleTags?split(",") as articleTag>
                     <a class="tag fn-right list-tags"  rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                     [${articleTag}]&nbsp;</a>
                 </#list>
@@ -68,13 +69,6 @@
         </div>
     </article>
     </#list>
-        <div>
-        <#list resources as resource>
-        <#if resource>
-            <li>${resource.resourceName}</li>
-        </#if>
-        </#list>
-        </div>
     <#if 0 != paginationPageCount>
         <div class="fn-clear">
             <nav class="pagination fn-right">

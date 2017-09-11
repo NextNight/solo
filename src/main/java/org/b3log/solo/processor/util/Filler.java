@@ -736,10 +736,12 @@ public class Filler {
             final int pageSize = preference.getInt(Option.ID_C_ARTICLE_LIST_DISPLAY_COUNT);
             final int windowSize = preference.getInt(Option.ID_C_ARTICLE_LIST_PAGINATION_WINDOW_SIZE);
             final JSONObject statistic = statisticQueryService.getStatistic();
+
             final Query query = new Query().addSort(Resource.RESOURCE_LIKE_COUNT,SortDirection.DESCENDING);
             final Template template = Templates.getTemplate((String) request.getAttribute(Keys.TEMAPLTE_DIR_NAME), "index.ftl");
-            final JSONObject result = articleRepository.get(query);
+            final JSONObject result = resourceRepository.get(query);
             final List<JSONObject> resources = org.b3log.latke.util.CollectionUtils.jsonArrayToList(result.getJSONArray(Keys.RESULTS));
+            System.out.println("resource....."+resources.size());
             dataModel.put(Resource.RESOURCES,resources);
 
         } catch (final JSONException e) {
