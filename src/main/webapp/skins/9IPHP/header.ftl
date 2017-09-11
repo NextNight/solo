@@ -1,32 +1,13 @@
 <header>
     <div class="banner">
-        <div class="fn-clear wrapper">
+        <div class="fn-clear wrapper text-center">
             <h1 class="fn-inline">
                 <a href="${servePath}" rel="start">
                     ${blogTitle}
                 </a>
-            </h1>
+            </h1></br>
             <small> &nbsp; ${blogSubtitle}</small>
-            <div class="fn-right">
-                <#if isLoggedIn>
-                    <a href="${servePath}/admin-index.do#main" title="CurrentAdmin">
-                        <i class=" fa fa-user" ></i> ${userName}
-                    </a>
-                    <a href="${servePath}/admin-index.do#main" title="${adminLabel}">
-                        <i class=" fa fa-cogs"></i> ${adminLabel}
-                    </a>
-                    <a href="${logoutURL}" title="${logoutLabel}">
-                        <i class="fa fa-power-off"></i> ${logoutLabel}
-                    </a>
-                    <#else>
-                    <a href="${loginURL}">
-                        <i class=" fa fa-user"></i> ${loginLabel}
-                    </a>
-                    <a href="${servePath}/register">
-                        <i class="fa fa-user-md"></i> ${registerLabel}
-                    </a>
-                </#if>
-            </div>
+
         </div>
     </div>
 
@@ -61,6 +42,26 @@
             <#--RZX
                 移除搜索框，到side-head
              change -->
+            <nav class="fn-right">
+            <#if isLoggedIn>
+                <a href="${servePath}/admin-index.do#main" title="CurrentAdmin">
+                    <i class=" fa fa-user" ></i> ${userName}
+                </a>
+                <a href="${servePath}/admin-index.do#main" title="${adminLabel}">
+                    <i class=" fa fa-cogs"></i> ${adminLabel}
+                </a>
+                <a href="${logoutURL}" title="${logoutLabel}">
+                    <i class="fa fa-power-off"></i> ${logoutLabel}
+                </a>
+            <#else>
+                <a href="${loginURL}">
+                    <i class=" fa fa-user"></i> ${loginLabel}
+                </a>
+                <a href="${servePath}/register">
+                    <i class="fa fa-user-md"></i> ${registerLabel}
+                </a>
+            </#if>
+            </nav>
         </div>
        <#-- <div class="icon-up " title="去底部" onclick="Util.goBottom()"></div>-->
     </div>

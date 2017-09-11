@@ -28,7 +28,7 @@ import javax.servlet.http.HttpServletResponse;
  * Date:2017/9/7
  */
 @RequestProcessor
-public class ResourceConsole {
+public class  ResourceConsole {
     /**
      * Logger.
      */

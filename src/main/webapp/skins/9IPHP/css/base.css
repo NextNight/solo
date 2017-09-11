@@ -654,7 +654,7 @@ a {
 .module header h1 {
     line-height: 20px;
     font-size: 17px;
-    border-bottom: 4px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
 }
 
 .module main {
@@ -740,10 +740,10 @@ a {
 
 /* start framework */
 .wrapper {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     min-width: 920px;
-    max-width: 1500px;
+   /* max-width: 1500px;*/
 }
 
 aside {
@@ -765,7 +765,7 @@ aside {
 /* start header */
 .banner {
     background-color: #060406;
-    height: 75px;
+    height: 120px;
 }
 
 .banner h1 a {

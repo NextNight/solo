@@ -37,7 +37,6 @@
             ${article.articleAbstract}
         </main>
         <footer class="fn-clear tags">
-
             <div class="meta">
                 <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
                     <i class="fa fa-calendar"></i>

@@ -50,7 +50,6 @@ public class ResourceMgmtService {
             final JSONObject result = resourceRepository.get(query);
             int resourceCount =result.length();
             final int pageCount = (int) Math.ceil((double) resourceCount / (double) pageSize);
-            query.setPageCount(pageCount);
             final JSONObject pagination = new JSONObject();
 
             ret.put(Pagination.PAGINATION, pagination);
