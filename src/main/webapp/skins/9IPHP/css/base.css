@@ -740,10 +740,10 @@ a {
 
 /* start framework */
 .wrapper {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     min-width: 920px;
-   /* max-width: 1500px;*/
+   max-width: 1800px;
 }
 
 aside {
