@@ -748,7 +748,7 @@ a {
 
 aside {
     width: 28%;
-    min-width: 236px;
+    min-width: 339.94px;
 }
 
 .main-wrap {
@@ -758,14 +758,16 @@ aside {
 .main-wrap > main {
     margin-right: 30px;
     flex: 1;
-    min-width: 900px;
+    min-width: 844.16px;
 }
 /* end framework */
 
 /* start header */
 .banner {
-    background-color: #060406;
+   /* background-color: #060406;*/
     height: 120px;
+    background-image: url(http://os36ky6gs.bkt.clouddn.com/3.png);
+    background-size: 100%;
 }
 
 .banner h1 a {
@@ -797,18 +799,19 @@ aside {
     border-bottom: 1px solid #eee;
     height: 40px;
     margin-bottom: 10px;
+    background-color: #3D4450;
 }
 
 .navbar.pin {
     position: fixed;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(61, 68, 80, 0.36);
     top: 0;
     z-index: 10;
 }
 
 .navbar nav a {
-    color: #555;
+    color: #fffdfd;
     text-decoration: none;
     line-height: 40px;
     padding: 0 5px;
@@ -817,12 +820,13 @@ aside {
 
 .navbar nav a:hover {
     color: whitesmoke;
-    background-color: #3D4450;
+    background-color: #060406;
 }
 
 .navbar nav a.current {
-    background-color: #393939;
+    background-color: #060406;
     color: whitesmoke;
+    border-bottom:1px whitesmoke  solid;
 }
 
 .navbar form {
@@ -1121,7 +1125,7 @@ aside.has-toc > section:last-child {
 @media (max-width: 700px) {
     .wrapper {
         width: 100%;
-        /*min-width: auto;*/
+        min-width: auto;
         padding: 0 10px;
         box-sizing: border-box;
     }

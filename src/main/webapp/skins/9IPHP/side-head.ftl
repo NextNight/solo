@@ -1,10 +1,11 @@
-<#--<div>
+<div class="module">
     <form class="form" target="_blank" action="http://zhannei.baidu.com/cse/site">
-        <input placeholder="${searchLabel}" id="search" type="text" name="q"/>
-        <button type="submit"><i class="icon-search"></i></button>
+        <input placeholder="search..." id="search" type="text" name="q"/>
+        <#--<button type="submit"><i class="fa fa-search"></i></button>-->
         <input type="hidden" name="cc" value="${serverHost}">
     </form>
-</div>-->
+</div>
+<#--
 <div class="module fn-clear " style="text-align: center">
     <a href="#" class="side-block" alt="邮箱:10321329190@qq.com/13572843652@163.com" title="邮箱:10321329190@qq.com/13572843652@163.com">
         <i class="fa fa-envelope-open"  ></i> Email
@@ -35,4 +36,4 @@
             <td class="text-primary">支付宝打赏</td>
         </tr>
     </table>
-</div>
+</div>-->
