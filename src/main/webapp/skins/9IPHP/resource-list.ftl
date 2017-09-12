@@ -31,13 +31,13 @@
 
 </div>
 <div class="module" style="width: 100%;height: 200px">
-    <div class="module fn-left" style="width: 48%;background-color:rgba(211,187,238,0.16); padding: 10px;margin: 5px">
+    <div class="module fn-left" style="width: 46%;background-color:rgba(211,187,238,0.16); padding: 10px;margin: 5px">
         <header>
             <h1>资源列表<h1>
         </header>
         <main>
             <#list resources as resource>
-                <list>
+                <list style="list-style: inside">
                 <li style="margin-bottom:5px ">
                     <label >${resource.resourceName}<label>
                      <i class="fa fa-heart-o fn-right  " style="padding-right: 40px">2</i>
@@ -47,7 +47,7 @@
             </#list>
         </main>
     </div>
-    <div class="module fn-right" style="width: 48%;background-color: rgba(211,187,238,0.16)">
+    <div class="module fn-right" style="width: 46%;background-color: rgba(211,187,238,0.16);padding: 10px;margin: 5px">
         <header>
             <h1>站点推荐<h1>
         </header>
@@ -55,13 +55,13 @@
             <list>
                 <li style="margin-bottom:5px ">
                     <label style="width: 60px;height: 20px;">极客学院</label>
-                        <i class="fa fa-heart-o fn-right " style=padding-left: 10px">2</i>
-                        <a herf="" class="fn-right" style="padding: 2px">开始下载</a>
+                        <i class="fa fa-heart-o fn-right ">2</i>
+                        <a herf="" class="fn-right">开始下载</a>
                 </li>
                 <li style="margin-bottom:5px ">
                     <label >慕课学院<label>
                         <i class="fa fa-heart-o fn-right " style="padding-left: 10px">2</i>
-                        <a herf="" class="fn-right" style="padding: 2px">开始下载</a>
+                        <a herf="" class="fn-right">开始下载</a>
                 </li>
             </list>
         </main>

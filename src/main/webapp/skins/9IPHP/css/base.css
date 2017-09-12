@@ -743,7 +743,7 @@ a {
     width: 90%;
     margin: 0 auto;
     min-width: 920px;
-   max-width: 1800px;
+   max-width: 1600px;
 }
 
 aside {
@@ -758,7 +758,7 @@ aside {
 .main-wrap > main {
     margin-right: 30px;
     flex: 1;
-    min-width: 1px;
+    min-width: 900px;
 }
 /* end framework */
 
