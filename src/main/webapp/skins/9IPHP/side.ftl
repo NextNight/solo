@@ -50,16 +50,17 @@
             </div>
         </#if>
             <!--<div class="panel-hd">按钮</div>-->
-                <div class="module card">
-                    <div class="card-header">
+              <#--  <div class="module">
+                  &lt;#&ndash;  <div class="card-header">
                         <ul class="tab-nav">
                             <li class="active"><header><i class="fa fa-eyedropper"></i> ${mostViewCountArticlesLabel}</header></li>
                             <li class=""> <header><i class="fa fa-comment"></i> ${mostCommentArticlesLabel}</header></li>
                         </ul>
                     </div>
-                    <div class="tab-cont" style="display: block;">
+                    <div class="tab-cont" style="display: block;">&ndash;&gt;-->
                     <#if 0 != mostViewCountArticles?size>
                         <div class="module">
+                            <header><h1><i class="fa fa-eyedropper"></i> ${mostViewCountArticlesLabel}</h1></header>
                             <main class="list">
                                 <ul>
                                     <#list mostViewCountArticles as article>
@@ -86,10 +87,9 @@
                             </main>
                         </div>
                     </#if>
-                    </div>
-                    <div class="tab-cont" style="display: none;">
                     <#if 0 != mostCommentArticles?size>
                         <div class="module">
+                            <header><h1><i class="fa fa-comment"></i> ${mostCommentArticlesLabel}</h1></header>
                             <main class="list">
                                 <ul>
                                     <#list mostCommentArticles as article>
@@ -115,7 +115,5 @@
                             </main>
                         </div>
                     </#if>
-                    </div>
-                </div>
     </section>
 </aside>
