@@ -3,6 +3,8 @@
         <#include "side-head.ftl">
         <div class="module meta">
             <main class="fn-clear">
+                <fieldset style="border:1px threedface solid" >
+                    <legend>数据统计</legend>
                 <img src="${adminUser.userAvatar}" aria-label="${adminUser.userName}"/>
                 <div class="fn-right">
                     <a href="${servePath}/archives.html">
@@ -14,6 +16,7 @@
                 ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span><br/>
                 ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span>
                 </div>
+                </fieldset>
             </main>
         </div>
         <#if noticeBoard??>

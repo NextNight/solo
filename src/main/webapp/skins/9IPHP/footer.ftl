@@ -17,7 +17,7 @@
     </div>
 </footer>
 <#--RZX ADD-->
-<div class="icon-up fa fa-chevron-circle-up fa-2x" title="回到顶部" onclick="Util.goTop()"></div>
+<div class="icon-up <#--fa fa-chevron-circle-up--> fa-2x" title="回到顶部" onclick="Util.goTop()"></div>
 
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>

@@ -3,12 +3,12 @@
     <article class="post ">
     <#-- RZX ADD -->
         <div class="post-list">
-        <div class="img-at-icon ">
+        <#--<div class="img-at-icon ">
         <#if article.articleAbstractIcon?exists>
             <img src="${article.articleAbstractIcon}" alt="${article.articleTitle}" title="${article.articleTitle}" />
         </#if>
-        </div>
-        <main class="content-reset fn-clear" >
+        </div>-->
+        <main class="content-reset fn-clear" style="padding-top:20px;padding-left: 10px">
             <h6>
             <a  rel="bookmark" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
@@ -33,38 +33,17 @@
                 -->
             </span>
             </h6>
-
-            ${article.articleAbstract}
-        </main>
-        <footer class="fn-clear tags">
+            <footer class="fn-clear">
             <div class="meta">
-                <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
-                    <i class="fa fa-calendar"></i>
-                    <time>
-                         ${article.articleCreateDate?string("yyyy-MM-dd")}
-                    </time>
-                </span>
-                &nbsp; | &nbsp;
-                <span class="tooltipped tooltipped-n" aria-label="${commentCountLabel}">
-                    <i class="fa fa-comments"></i>
-                    <a href="${servePath}${article.articlePermalink}#comments">
-                        ${article.articleCommentCount} ${commentLabel}</a>
-                </span>
-                &nbsp; | &nbsp;
-                <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
-                    <i class="fa fa-eye"></i>
-                ${article.articleViewCount} ${viewLabel}
-                </span>
-                &nbsp; | &nbsp;
-                <span class="tooltipped tooltipped-n" aria-label="Author">
-                    <i class="fa fa-user"></i>
-                ${article.articleAuthorName}
-                </span>
-                <a href="${servePath}${article.articlePermalink}#more" rel="contents" class="fn-right tooltipped tooltipped-n">
-                ${readLabel} &raquo;
-                </a>
+                 ${article.articleAbstract}
+                 <div><span style="border-bottom: 1px #ee8690 dashed">By/${article.articleAuthorName}</span>/日期：${article.articleCreateDate?string("yyyy-MM-dd HH:mm:ss")}/<a href="${servePath}${article.articlePermalink}#comments">
+                 ${article.articleCommentCount} ${commentLabel}</a>/${article.articleViewCount} ${viewLabel}
+                 <a href="${servePath}${article.articlePermalink}#more" rel="contents" class="fn-right tooltipped tooltipped-n">${readLabel} &raquo;</a>
+                 </div>
+
             </div>
-        </footer>
+            </footer>
+        </main>
         </div>
     </article>
     </#list>

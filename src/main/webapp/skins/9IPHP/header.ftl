@@ -63,7 +63,6 @@
             </#if>
             </nav>
         </div>
-       <#-- <div class="icon-up " title="去底部" onclick="Util.goBottom()"></div>-->
     </div>
 </header>
 <div class="responsive fn-none">
