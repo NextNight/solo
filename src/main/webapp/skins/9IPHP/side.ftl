@@ -2,9 +2,9 @@
     <section>
         <#include "side-head.ftl">
         <div class="module meta">
+            <fieldset style="border:1px threedface solid" >
+                <legend>数据统计</legend>
             <main class="fn-clear">
-                <fieldset style="border:1px threedface solid" >
-                    <legend>数据统计</legend>
                 <img src="${adminUser.userAvatar}" aria-label="${adminUser.userName}"/>
                 <div class="fn-right">
                     <a href="${servePath}/archives.html">
@@ -16,14 +16,16 @@
                 ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span><br/>
                 ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span>
                 </div>
-                </fieldset>
             </main>
+            </fieldset>
         </div>
         <#if noticeBoard??>
             <div class="ad content-reset">
                 ${noticeBoard}
             </div>
         </#if>
+            <#--常用站点-->
+        <#include "common-wesite.ftl">
         <#if 0 != mostUsedCategories?size>
             <div class="module">
                 <header><h1><i class="fa fa-list-ol"></i> ${categoryLabel}</h1></header>

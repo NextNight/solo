@@ -2,7 +2,7 @@
     <div class="area ">
         <div id=js class="js">
             <div class="box01" style="width:100%">
-                <img  src="http://static.qifeiye.com/caches/803caf944d2d1ffc0f4dabb6bb35ba35/aHR0cDovLzU1Y2MxMmYyMjA5YTkudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNy8wNi8xNDk3ODgwMDU4NTk0N2Q1ZmE3MWE5YTk1MS0xMDI0eDY4Mi5wbmc_p_p100_p_3D.png">
+                <img  src="http://os36ky6gs.bkt.clouddn.com/3.png">
                 <img style="DISPLAY: none" src="http://os36ky6gs.bkt.clouddn.com/3.png">
                 <img style="DISPLAY: none"  src="http://os36ky6gs.bkt.clouddn.com/3.png">
                 <img  style="DISPLAY: none"  src="http://os36ky6gs.bkt.clouddn.com/3.png">

@@ -891,7 +891,7 @@ aside {
 }
 
 .icon-up:before {
-    content: "⬆";
+    content: "⇧";
 }
 
 .icon-up:hover {
@@ -1388,4 +1388,11 @@ aside.has-toc > section:last-child {
 }
 .pdlf-20{
     padding-left: 20px;
+}
+
+.zy_list{
+    margin-bottom: 5px;
+}
+.zy_list a{
+    color: #00b0e8;
 }
