@@ -3,7 +3,6 @@
     &copy; ${year}-07-07
     <a href="${servePath}">${blogTitle}</a>  &nbsp;   • &nbsp;
     <a href="https://hacpai.com/tag/solo" target="_blank">Solo</a> ${version}  <br/>
-
     Powered by <a rel="nofollow" href="http://b3log.org" target="_blank">B3log</a>开源&nbsp;
     <span class="ft-warn">&heartsuit;</span>
     Theme by <a rel="nofollow" href="https://github.com/9IPHP/9IPHP" target="_blank">9IPHP</a>&<a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>&<a href="${servePath}">Atlas</a>
