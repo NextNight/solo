@@ -193,7 +193,7 @@ main h6 a{
     color: rgba(77, 77, 77, 1);
 }
 .content-reset h6:before {
-    content: "██ ";
+    content: "███ ";
     color:cadetblue
 }
 /*.content-reset h2:before {
@@ -651,7 +651,6 @@ a {
 }
 
 .module header h1 {
-    text-align: center;
     font-weight: 500;
     line-height: 20px;
     font-size: 17px;
@@ -1384,7 +1383,10 @@ aside.has-toc > section:last-child {
     text-align: center;
 }
 .pdlf-2{
-    padding-left: 2px;
+     padding-left: 2px;
+ }
+.pdrg-2{
+    padding-right: 2px;
 }
 .pdlf-20{
     padding-left: 20px;
@@ -1392,7 +1394,12 @@ aside.has-toc > section:last-child {
 
 .zy_list{
     margin-bottom: 5px;
+    width:50%;
 }
-.zy_list a{
-    color: #00b0e8;
+.zy_list a:before{
+    content: '👉';
+}
+.zy_list a:hover{
+    border: 1px #3f83a4 dashed;
+    text-decoration:none
 }

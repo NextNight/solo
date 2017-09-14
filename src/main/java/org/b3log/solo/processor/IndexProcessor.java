@@ -155,7 +155,6 @@ public class IndexProcessor {
             filler.fillSide(request, dataModel, preference);
             filler.fillBlogHeader(request, response, dataModel, preference);
             filler.fillBlogFooter(request, dataModel, preference);
-            filler.fillResources(request, dataModel,preference);
 
             dataModel.put(Pagination.PAGINATION_CURRENT_PAGE_NUM, currentPageNum);
             final int previousPageNum = currentPageNum > 1 ? currentPageNum - 1 : 0;

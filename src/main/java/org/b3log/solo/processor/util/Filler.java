@@ -823,6 +823,9 @@ public class Filler {
             if (Templates.hasExpression(template, "<#list mostViewCountArticles as article>")) {
                 fillMostViewCountArticles(dataModel, preference);
             }
+            if (Templates.hasExpression(template, "<#list resources as resource>")) {
+                fillResources(request, dataModel,preference);
+            }
         } catch (final ServiceException e) {
             LOGGER.log(Level.ERROR, "Fills side failed", e);
             throw new ServiceException(e);

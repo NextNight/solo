@@ -433,7 +433,8 @@
                 {
                     "name": "resourceLikeCount",
                     "type": "int",
-                    "length": 10
+                    "length": 10,
+                    "nullable": true
                 },
                 {
                     "name": "resourceDlCount",
