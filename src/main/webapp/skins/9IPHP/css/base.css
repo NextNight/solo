@@ -196,22 +196,13 @@ main h6 a{
     content: "███ ";
     color:cadetblue
 }
-/*.content-reset h2:before {
-    content: "◉ ";
-}
-.content-reset h3:before {
-    content: "◉ ";
 
-}
-.content-reset h4:before {
-    content: "◉ ";
-}*/
 
 .content-reset h1 {
     padding-bottom: 0.3em;
     font-size: 17px;
     font-weight: 500;
-    background-color: beige;
+    background-color: #f5f5f4;
 }
 .content-reset h2 {
     padding-bottom: 0.3em;
@@ -295,7 +286,7 @@ main h6 a{
 }
 .content-reset pre>code {
     padding: 0.5em;
-    color: black;
+    color: #1373a9;
     background-size: 20px 20px;
     border-radius: 3px;
     background-color: #f9f6f6;
@@ -1385,6 +1376,9 @@ aside.has-toc > section:last-child {
 .pdlf-2{
      padding-left: 2px;
  }
+.pdlf-5{
+    padding-left: 2px;
+}
 .pdrg-2{
     padding-right: 2px;
 }
@@ -1395,6 +1389,7 @@ aside.has-toc > section:last-child {
 .zy_list{
     margin-bottom: 5px;
     width:50%;
+    height: 18px;
 }
 .zy_list a:before{
     content: '👉';
