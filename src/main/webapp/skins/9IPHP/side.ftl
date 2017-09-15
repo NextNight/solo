@@ -112,16 +112,17 @@
         </#if>
         <#--下载列表-->
         <#if 0 !=resources?size >
-            <div class="module" <#--style="border:1px #e9e4e4 solid"-->>
-                <header ><h1><i class="fa fa-bandcamp"></i>书籍列表<a href="#" class="fn-right" title="more"> <i class="fa fa-angle-double-right"></i></a></h1> </header>
+            <div class="module">
+                <header ><h1><i class="fa fa-bandcamp"></i>书籍列表<a href="" style="font-size:12px;color: #ee8690">下载须知</a>
+                    <a href="#" class="fn-right" title="more"> <i class="fa fa-angle-double-right"></i></a></h1> </header>
                 <main >
-                    <marquee direction="up"   behavior="alternate" loop=-1 truespeed="truespeed" height="150px"  scrolldelay="100" scrollamount=" 1">
+                    <marquee direction="up" onMouseOut="this.start()" onMouseOver="this.stop()"  behavior="alternate" loop=-1 truespeed="truespeed" height="150px"  scrolldelay="100" scrollamount=" 1">
                         <#list resources as resource>
                             <div style="padding-bottom: 5px">
-                                 <i class="fa fa-book" style="color: #1f7199"></i> ${resource.resourceName}
+                                 <a href="#" title="${resource.resourceInstruction}"><i class="fa fa-file-pdf-o" style="color: #ee8690"></i> ${resource.resourceName}</a>
                                 <div class="fn-right pdlf-20">
-                                    <a href="${resource.resourceUrl}" target="_blank" style="color: #1f7199" aria-label="开始下载"><i class="fa fa-cloud-download"></i></a>
-                                    <i class="fa fa-heart-o pdlf-5"></i> ${resource.resourceLikeCount}
+                                    <a href="http://${resource.resourceUrl}" target="_blank" style="color: #6fc7d3" aria-label="开始下载"><i class="fa fa-cloud-download"></i></a>
+                                    <i class="fa fa-heart-o pdlf-5"></i>${resource.resourceLikeCount}
                                 </div>
                             </div>
                         </#list>

@@ -9,14 +9,19 @@
     </br> ${footerContent}
     </div>
     <div class="title" style="width: 30%;float: left;text-align: left;">
+       <div class="fn-left" style="width: 50%">
         <#--友情链接：-->
-    <a rel="archive" href="${servePath}/links.html"> ${linkLabel} </a>
-            <br> <a href="${servePath}/aboutme.html">关于作者</a><br>
-    <a rel="archive" href="${servePath}/sitemap.xml">网站地图</a>
+        <a rel="archive" href="${servePath}/links.html"> ${linkLabel} </a>
+                <br> <a href="${servePath}/aboutme.html">关于作者</a><br>
+        <a rel="archive" href="${servePath}/sitemap.xml">网站地图</a>
+       </div>
+        <div class=" pdlf-20">
+            <img style="width: 90px;height: 90px;border: 1px whitesmoke solid" src="http://qn.atlasbl.cn/f0e19507a74b44eaaa06f7b9a21cedfa.png" />
+        </div>
     </div>
 </footer>
 <#--RZX ADD-->
-<div class="icon-up <#--fa fa-chevron-circle-up--> fa-2x" title="回到顶部" onclick="Util.goTop()"></div>
+<div class="icon-up fa-2x" title="回到顶部" onclick="Util.goTop()"></div>
 
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>

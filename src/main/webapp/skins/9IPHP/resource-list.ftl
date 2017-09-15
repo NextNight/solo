@@ -1,5 +1,5 @@
 <div class="module">
-    <div class="area ">
+    <div class="area">
         <div id=js class="js">
             <div class="box01" style="width:100%">
                 <img  src="http://os36ky6gs.bkt.clouddn.com/3.png">
