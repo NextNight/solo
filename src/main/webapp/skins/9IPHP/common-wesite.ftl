@@ -1,6 +1,6 @@
 <div class="module">
     <header><h1><i class="fa  fa-hand-o-right"></i> 推荐站点</h1></header>
-    <main class="list" style="height: 160px">
+    <main class="list" style="height: 180px">
         <div class="zy_list fn-left ">
             <a  href="http://sklearn.lzjqsdd.com/"  > Sklearn中文</a>
            <#-- <span class="fn-right">⭐⭐⭐</span>-->
@@ -25,7 +25,7 @@
             <a  href="http://fontawesome.io/icons/" title="FontAwesome"> 图标字体</a>
         </div>
         <div class="zy_list fn-left" >
-            <a  href="https://color.adobe.com/zh/explore/?filter=most-popular&time=month" title="FontAwesome"> 色彩搭配</a>
+            <a  href="https://color.adobe.com/zh/explore/?filter=most-popular&time=month" title="Abode Color"> 色彩搭配</a>
         </div>
         <hr>
         <div class="zy_list fn-left" >
@@ -39,6 +39,13 @@
         </div>
         <div class="zy_list fn-right" >
             <a  href="http://www.w3school.com.cn/sql/sql_having.asp" title="SQL教程"> SQL教程</a>
+        </div>
+        <hr>
+        <div class="zy_list fn-right" >
+            <a  href="http://www.jikexueyuan.com/" title="极客学院"> 极客学院</a>
+        </div>
+        <div class="zy_list fn-right" >
+            <a  href="http://www.imooc.com/" title="慕课网"> 慕课网</a>
         </div>
     </main>
 </div>
